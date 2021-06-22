@@ -1,0 +1,61 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+  -> Working Parameters 
+      almost_at          =  1.000000000000000E-012
+      a_scale            =  -1.00000000000000     
+      a_small            =  0.000000000000000E+000
+      margin_plus_limit  =  0.000000000000000E+000
+      margin_minus_limit =  0.000000000000000E+000
+      at 2 out lim displ =  0.000000000000000E+000
+      at 2 in  lim displ =  0.000000000000000E+000
+      Bounding boxes not found 
+  
+ ------------------------ Nodes Count ----------------------  
+  
+ ---> in  nodes =      1747156
+ ---> out nodes =        24405
+ ---> at  nodes =            0
+  
+ ---> sum of nodes check :: ok
+  
+  
+ ------------------------ Faces Count ----------------------  
+  
+ ---> in  faces =      5147820
+ ---> out faces =        67272
+ ---> at  faces =        12108
+ ---> iso faces =            0
+ ---> bad faces =            0
+  
+ ---> sum of faces check :: ok
+  
+  
+ ------------------------- FVs Count -----------------------  
+  
+ ---> in  FVs =      1700456
+ ---> out FVs =        21488
+ ---> at  FVs =         6056
+  
+ ---> sum of FVs check :: ok
+  
+  
+ ----------------------- Trimmed Ci -----------------------  
+  None 
+ -------------------------  Wrong Ci -----------------------  
+  
+ -   Problems with ->           0 cells , Ci<0
+ -   with : max(abs(Ci_lt_0)= -1.797693134862316E+308
+ -
+ -   Problems with ->          31 cells , Ci>1
+ -   with : max(abs(Ci_gt_1-1)=  2.664535259100376E-015
+  
+  
+  ---> Faces with more than two section points: 
+   None 
+ -   Created files for debugging:
+ ----- a general information file:         Ci_gt_oneBubble.txt      
+ ----- a matlab file for visualizing interface approximations               
+ ----- and the relevant cells:             Ci_gt_oneBubble.m      

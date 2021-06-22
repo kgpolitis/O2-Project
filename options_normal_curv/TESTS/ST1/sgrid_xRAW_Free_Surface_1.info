@@ -1,0 +1,36 @@
+  ---- Surface Grid Generation by RAW capturing data : debug file 
+  ---- Interface's Name is : Free_Surface
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=       168065
+    > max hash=       173316
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =        2626
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > NONE FOUND 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =        5125
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =        2500
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats
+  - Nodes  :         2626
+  - Edges  :         5125
+  - Bedges :          250
+  - Nvar   :         2750
+  - Cells  :         2500
+  - Euler X:            1

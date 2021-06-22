@@ -1,0 +1,3 @@
+ ifort -check all -traceback test_paraneighs.f90 -I../../../Dlib_lucid/incs \
+ -L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva \
+ -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich

@@ -1,0 +1,3 @@
+
+ ifort test_chol.f90 -o test_chol.out \
+ -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lgenmods

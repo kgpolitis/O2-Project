@@ -1,0 +1,1 @@
+ifort -L/home/g/my_mpich/lib/ -lmpich -lmpichf90 -I/home/g/my_mpich/include -L../../Dlib -lO2mpi -I../../Dlib/incs basic_test.f90

@@ -1,0 +1,16 @@
+  Mode is:            0
+  Using Tags 
+  Using n1 Tags 
+  Not using level per cell 
+  Searches are masked 
+  - Started Setting up n1 neighs 
+  - Started Setting up n1 neighs with lasso 
+  - Finished Setting up n1 neighs with lasso 
+   Working with Neighborhoods 
+  Searching for neighborhoods 
+  Done extending Neighborhoods 
+  Searching for neighborhoods 
+  Done extending Neighborhoods 
+  Searching for neighborhoods 
+  Done extending Neighborhoods 
+  Done Neighs Setup 

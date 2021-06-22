@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 7 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Interpolation corrections are based on ivar
+2. Gradient is not used for the interpolation, nor the corrections
+3. PLIC is used and the defines the ivar value on a pseudocell defined by inflating the boundary face
+4. Each time we introduce a gradient correction in the plic subroutine and repeat the PLIC untill convergence
+5. Npasses is 0
+
+
+Observations:
+1. The results are a bit worse than in the previous case.
+2. The curvature is a bit smaller but stills scales upwards as the grid is refined.
+

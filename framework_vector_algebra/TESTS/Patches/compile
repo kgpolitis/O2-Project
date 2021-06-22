@@ -1,0 +1,2 @@
+ifort patchy_patch.f90 -o patchy_patch.out \
+ -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva

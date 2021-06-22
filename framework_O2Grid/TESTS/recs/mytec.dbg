@@ -1,0 +1,1721 @@
+Opening File: tecplot.fnt
+  IsReading = 1
+  IsOk = 0
+Opening File: /opt/tecplot/tecplot.fnt
+  IsReading = 1
+  IsOk = 1
+Visual for OnScreen rendering:
+visualid      = 0x32 (50 decimal)
+screen        = 0
+depth         = 24
+XCLASS        = 4
+red_mask      = 0xff0000
+green_mask    = 0xff00
+blue_mask     = 0xff
+colormap_size = 256
+bits_per_rgb  = 8
+DoubleClick = 200 ms
+Set Standard colors
+Colormap built
+Cursor max WxH = 48x48
+IDotsPerInch         = 143.015
+JDotsPerInch         = 143.623
+JDotsPerIDots        = 1.00425
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_START
+ProcessRendering: DL_FRAME_PREDATA
+RenderFrameData
+ProcessRendering: DL_FRAME_BASE_ZONE_MAP_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_BASE_COB_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_VIEW_SENSITIVE_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_PANELSORTED_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_POSTDATA
+ProcessRendering: DL_FRAME_FINISH
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Opening File: /home/g/O2-project/framework_O2Grid/TESTS/recs/tecplot.mcr
+  IsReading = 1
+  IsOk = 0
+Opening File: /home/g/.tecplot.mcr
+  IsReading = 1
+  IsOk = 0
+Opening File: /opt/tecplot/tecplot.mcr
+  IsReading = 1
+  IsOk = 1
+Opening File: /opt/tecplot/tecplot.mcr
+  IsReading = 1
+  IsOk = 1
+Loading /opt/tecplot/tecplot.mcr, FileOk=1
+
+
+Checking Flow for Main Macro:
+
+
+Checking Flow for Macro Function: Create new page
+
+
+Checking Flow for Macro Function: Rename this page
+
+
+Checking Flow for Macro Function: Get this page's name
+
+
+Checking Flow for Macro Function: Go to page named...
+
+
+Checking Flow for Macro Function: Page >>
+
+
+Checking Flow for Macro Function: << Page
+
+
+Checking Flow for Macro Function: Delete this page
+
+
+Checking Flow for Macro Function: List all of the pages
+
+
+Checking Flow for Macro Function: 3D Rotation Animation
+
+
+Checking Flow for Macro Function: Reset Center of Rotation
+
+
+Checking Flow for Macro Function: GetPaperDim
+
+
+Checking Flow for Macro Function: Cascade Frames
+
+
+Checking Flow for Macro Function: Tile Frames
+
+
+Checking Flow for Macro Function: Load AddOn
+
+
+
+PROCESSING MACRO FILE
+
+Opening File: tecplotlm.lic
+  IsReading = 1
+  IsOk = 0
+Opening File: /opt/tecplot/tecplotlm.lic
+  IsReading = 1
+  IsOk = 1
+Opening File: /home/g/O2-project/framework_O2Grid/TESTS/recs/tecplot.add
+  IsReading = 1
+  IsOk = 0
+Opening File: /home/g/.tecplot.add
+  IsReading = 1
+  IsOk = 0
+Opening File: /opt/tecplot/tecplot.add
+  IsReading = 1
+  IsOk = 1
+Opening File: /opt/tecplot/tecplot.add
+  IsReading = 1
+  IsOk = 1
+Loading /opt/tecplot/tecplot.add, FileOk=1
+
+
+Checking Flow for Main Macro:
+
+
+Checking Flow for Macro Function: Create new page
+
+
+Checking Flow for Macro Function: Rename this page
+
+
+Checking Flow for Macro Function: Get this page's name
+
+
+Checking Flow for Macro Function: Go to page named...
+
+
+Checking Flow for Macro Function: Page >>
+
+
+Checking Flow for Macro Function: << Page
+
+
+Checking Flow for Macro Function: Delete this page
+
+
+Checking Flow for Macro Function: List all of the pages
+
+
+Checking Flow for Macro Function: 3D Rotation Animation
+
+
+Checking Flow for Macro Function: Reset Center of Rotation
+
+
+Checking Flow for Macro Function: GetPaperDim
+
+
+Checking Flow for Macro Function: Cascade Frames
+
+
+Checking Flow for Macro Function: Tile Frames
+
+
+Checking Flow for Macro Function: Load AddOn
+
+
+
+PROCESSING MACRO FILE
+
+            MAIN:   4 ( 23): $!LOADADDON  "tecutiltools_cfd"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:   6 ( 30): $!LOADADDON  "tecutildataio_loadcgns"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: CGNS Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:   8 ( 32): $!LOADADDON  "tecutildataio_loaddem"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:   9 ( 33): $!LOADADDON  "tecutildataio_loaddxf"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: DXF Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  18 ( 42): $!LOADADDON  "tecutildataio_loadflow3d"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: FLOW-3D Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  20 ( 44): $!LOADADDON  "tecutildataio_loadensight"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: EnSight Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  21 ( 45): $!LOADADDON  "tecutildataio_fluent"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: Fluent Data Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  22 ( 46): $!LOADADDON  "tecutildataio_loadgen"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: General Text Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  24 ( 48): $!LOADADDON  "tecutildataio_loadhdf"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  26 ( 50): $!LOADADDON  "tecutildataio_h5load"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: HDF5 Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  27 ( 51): $!LOADADDON  "tecutildataio_plot3d"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: PLOT3D Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  28 ( 52): $!LOADADDON  "tecutildataio_loadply"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: PLY Polygon File Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  29 ( 53): $!LOADADDON  "tecutildataio_loadss"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: Text Spreadsheet Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  30 ( 54): $!LOADADDON  "tecutildataio_loadkiva"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: Kiva Loader
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  31 ( 55): $!LOADADDON  "tecutildataio_loadfea"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+DataSet Reader Registered: 3D Systems STL (FEA)
+DataSet Reader Registered: ABAQUS .fil Data (FEA)
+DataSet Reader Registered: ABAQUS Input (FEA)
+DataSet Reader Registered: ANSYS CDWRITE Input (FEA)
+DataSet Reader Registered: ANSYS Results (FEA)
+DataSet Reader Registered: FLUENT/FIDAP Neutral (FEA)
+DataSet Reader Registered: LSTC/DYNA Input (FEA)
+DataSet Reader Registered: LSTC/DYNA Taurus State Database (FEA)
+DataSet Reader Registered: MSC/NASTRAN Bulk Data (FEA)
+DataSet Reader Registered: MSC/NASTRAN Output2 (FEA)
+DataSet Reader Registered: MSC/Patran Neutral (FEA)
+DataSet Reader Registered: PTC/Mechanica Design Study (FEA)
+DataSet Reader Registered: SDRC/IDEAS Universal (FEA)
+DataSet Reader Registered: StarCCM (FEA)
+DataSet Reader Registered: OpenFOAM (FEA)
+DataSet Reader Registered: ANSYS CFX (FEA)
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  33 ( 58): $!LOADADDON  "pythonutil"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  35 ( 73): $!LOADADDON  "tecutilcurvefit_crvakima"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Extended Curve Fit Registered: Akima Spline
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  36 ( 74): $!LOADADDON  "tecutilcurvefit_crvgen"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Extended Curve Fit Registered: General Curve Fit
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  37 ( 75): $!LOADADDON  "tecutilcurvefit_stineinterp"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Extended Curve Fit Registered: Stineman Interpolation
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  38 ( 78): $!LOADADDON  "tecutilscript_extendmcr"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  39 ( 79): $!LOADADDON  "tecutiltools_advqet"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  40 ( 86): $!LOADADDON  "tecutiltools_multiframe3d"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  41 ( 87): $!LOADADDON  "tecutiltools_mulframe"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  42 ( 88): $!LOADADDON  "tecutiltools_tensoregn"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  46 ( 93): $!LOADADDON  "tecutiltools_keyframe"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  47 ( 94): $!LOADADDON  "tecutiltools_editauxdata"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  51 (104): $!LOADADDON  "tecutiltools_timeseries"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  52 (108): $!LOADADDON  "tecutiltools_extractovertime"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  53 (111): $!LOADADDON  "tecutiltools_timelink"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  54 (114): $!LOADADDON  "tecutilscript_extendtimemcr"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+            MAIN:  55 (117): $!LOADADDON  "tecutiltools_strandeditor"
+ACTION: LOADADDON
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Opening File: /home/g/O2-project/framework_O2Grid/TESTS/recs/para1.plt
+  IsReading = 1
+  IsOk = 1
+ACTION: READDATASET: "/home/g/O2-project/framework_O2Grid/TESTS/recs/para1.plt"
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+SV: D=0      I=1    P=INTERFACE     ,INITIALPLOTTYPE
+SV DUPLICATE! :SV: D=0      I=0    P=INTERFACE     ,INITIALPLOTFIRSTZONEONLY
+SV DUPLICATE! :SV: D=0      I=1    P=INTERFACE     ,USEINITIALPLOTDIALOG
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Reading File: /home/g/O2-project/framework_O2Grid/TESTS/recs/para1.plt
+Opening File: /home/g/O2-project/framework_O2Grid/TESTS/recs/para1.plt
+  IsReading = 1
+  IsOk = 1
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+SV DUPLICATE! :SV: D=0      I=0    P=GLOBALTIME    ,SOLUTIONTIME  
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+View Pushed
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_START
+ProcessRendering: DL_FRAME_PREDATA
+RenderFrameData
+ProcessRendering: DL_FRAME_BASE_ZONE_MAP_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_BASE_COB_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_VIEW_SENSITIVE_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_PANELSORTED_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_POSTDATA
+ProcessRendering: DL_FRAME_FINISH
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = Unknown
+Unlock Requested, Lock Count =   0,  Requestor = Unknown
+Lock Requested,  Lock Count =   1,  Requestor = Fluent Data Loader
+Unlock Requested, Lock Count =   0,  Requestor = Fluent Data Loader
+Lock Requested,  Lock Count =   1,  Requestor = Finite Element Analysis Loader
+Unlock Requested, Lock Count =   0,  Requestor = Finite Element Analysis Loader
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Opening File: /usr/tmp/tecplot_g/tpak1CMLE/tpaTjMxtM
+  IsReading = 1
+  IsOk = 1
+Loading /usr/tmp/tecplot_g/tpak1CMLE/tpaTjMxtM, FileOk=1
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=0      I=4    P=GLOBALCONTOUR ,SHOWMESH      ,VAR           
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+ACTION: CONTOURLEVELS: RESETTONICE
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWMESH      ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWMESH      ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWMESH      ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWMESH      ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWMESH      ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWMESH      ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWMESH      ,SLICECONSTRAINT,ORIGIN        ,Z             
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWCONTOUR   ,SLICECONSTRAINT,ORIGIN        ,Z             
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWVECTOR    ,SLICECONSTRAINT,ORIGIN        ,Z             
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSCATTER   ,SLICECONSTRAINT,ORIGIN        ,Z             
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWSHADE     ,SLICECONSTRAINT,ORIGIN        ,Z             
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWBOUNDARY  ,SLICECONSTRAINT,ORIGIN        ,Z             
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWEDGE      ,SLICECONSTRAINT,ORIGIN        ,Z             
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWLINES     ,STARTPOSITION ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,PRIMARYPOSITION,X             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWLINES     ,ENDPOSITION   ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWLINES     ,STARTPOSITION ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,PRIMARYPOSITION,Y             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWLINES     ,ENDPOSITION   ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=-0.9   I=0    P=SLICEATTRIBUTES,SHOWLINES     ,STARTPOSITION ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,PRIMARYPOSITION,Z             
+SV: D=0.9    I=0    P=SLICEATTRIBUTES,SHOWLINES     ,ENDPOSITION   ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,SLICECONSTRAINT,BOXDIMENSION  ,X             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,SLICECONSTRAINT,ORIGIN        ,X             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,SLICECONSTRAINT,BOXDIMENSION  ,Y             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,SLICECONSTRAINT,ORIGIN        ,Y             
+SV: D=1      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,SLICECONSTRAINT,BOXDIMENSION  ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV DUPLICATE! :SV: D=0      I=0    P=SLICEATTRIBUTES,SHOWLINES     ,SLICECONSTRAINT,ORIGIN        ,Z             
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+SV: D=0      I=1    P=SLICELAYERS   ,SHOW          
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+SV: D=0.578125 I=0    P=GLOBALCONTOUR ,SHOWMESH      ,COLORCUTOFF   ,RANGEMIN      
+SV: D=1.45312 I=0    P=GLOBALCONTOUR ,SHOWMESH      ,COLORCUTOFF   ,RANGEMAX      
+Opening File: /usr/tmp/tecplot_g/tpak1CMLE/tpaEc98oB
+  IsReading = 1
+  IsOk = 1
+Loading /usr/tmp/tecplot_g/tpak1CMLE/tpaEc98oB, FileOk=1
+SV: D=0.578125 I=0    P=ISOSURFACEATTRIBUTES,SHOWMESH      ,ISOVALUE1     
+Lock Requested,  Lock Count =   2,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   1,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   2,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   1,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   2,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   1,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   2,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+SV: D=1.01562 I=0    P=ISOSURFACEATTRIBUTES,SHOWMESH      ,ISOVALUE2     
+Lock Requested,  Lock Count =   2,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   1,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   2,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   1,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   2,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   1,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   2,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+SV: D=1.45312 I=0    P=ISOSURFACEATTRIBUTES,SHOWMESH      ,ISOVALUE3     
+Lock Requested,  Lock Count =   2,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   1,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   2,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   1,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   2,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   1,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   2,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   2,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   1,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   2,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   1,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   2,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   1,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   2,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_START
+ProcessRendering: DL_FRAME_PREDATA
+RenderFrameData
+ProcessRendering: DL_FRAME_BASE_ZONE_MAP_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_BASE_COB_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_VIEW_SENSITIVE_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_PANELSORTED_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_POSTDATA
+ProcessRendering: DL_FRAME_FINISH
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Opening File: /usr/tmp/tecplot_g/tpak1CMLE/tpahApsCD
+  IsReading = 1
+  IsOk = 1
+Loading /usr/tmp/tecplot_g/tpak1CMLE/tpahApsCD, FileOk=1
+SV: D=0      I=4    P=SLICEATTRIBUTES,SHOWMESH      ,CONTOUR       ,CONTOURTYPE   
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_START
+ProcessRendering: DL_FRAME_PREDATA
+RenderFrameData
+ProcessRendering: DL_FRAME_BASE_ZONE_MAP_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_BASE_COB_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_VIEW_SENSITIVE_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_PANELSORTED_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_POSTDATA
+ProcessRendering: DL_FRAME_FINISH
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Opening File: /usr/tmp/tecplot_g/tpak1CMLE/tpa62JQZR
+  IsReading = 1
+  IsOk = 1
+Loading /usr/tmp/tecplot_g/tpak1CMLE/tpa62JQZR, FileOk=1
+SV: D=0      I=2    P=SLICEATTRIBUTES,SHOWMESH      ,SLICESURFACE  
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Lock Requested,  Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_START
+ProcessRendering: DL_FRAME_PREDATA
+RenderFrameData
+ProcessRendering: DL_FRAME_BASE_ZONE_MAP_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_BASE_COB_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_VIEW_SENSITIVE_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_PANELSORTED_DATA
+Lock Requested,  Lock Count =   3,  Requestor = Tecplot
+Unlock Requested, Lock Count =   2,  Requestor = Tecplot
+ProcessRendering: DL_FRAME_POSTDATA
+ProcessRendering: DL_FRAME_FINISH
+Unlock Requested, Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+ACTION: QUIT
+Lock Requested,  Lock Count =   1,  Requestor = Tecplot
+Unlock Requested, Lock Count =   0,  Requestor = Tecplot
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool
+Lock Requested,  Lock Count =   1,  Requestor = CFD Analyzer
+Unlock Requested, Lock Count =   0,  Requestor = CFD Analyzer
+Lock Requested,  Lock Count =   1,  Requestor = CGNS Loader
+Unlock Requested, Lock Count =   0,  Requestor = CGNS Loader
+Lock Requested,  Lock Count =   1,  Requestor = CGNS Loader
+Unlock Requested, Lock Count =   0,  Requestor = CGNS Loader
+Lock Requested,  Lock Count =   1,  Requestor = DEM Loader
+Unlock Requested, Lock Count =   0,  Requestor = DEM Loader
+Lock Requested,  Lock Count =   1,  Requestor = DXF Loader
+Unlock Requested, Lock Count =   0,  Requestor = DXF Loader
+Lock Requested,  Lock Count =   1,  Requestor = General Text Loader
+Lock Requested,  Lock Count =   2,  Requestor = General Text Loader
+Unlock Requested, Lock Count =   1,  Requestor = General Text Loader
+Unlock Requested, Lock Count =   0,  Requestor = General Text Loader
+Lock Requested,  Lock Count =   1,  Requestor = HDF Loader
+Unlock Requested, Lock Count =   0,  Requestor = HDF Loader
+Lock Requested,  Lock Count =   1,  Requestor = PLOT3D Loader
+Unlock Requested, Lock Count =   0,  Requestor = PLOT3D Loader
+Lock Requested,  Lock Count =   1,  Requestor = Text Spreadsheet Loader
+Unlock Requested, Lock Count =   0,  Requestor = Text Spreadsheet Loader
+Lock Requested,  Lock Count =   1,  Requestor = Advanced Quick Edit Tool
+Unlock Requested, Lock Count =   0,  Requestor = Advanced Quick Edit Tool

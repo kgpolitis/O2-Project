@@ -1,0 +1,16 @@
+RUN NOTES FOR sm_errs_lvls.txt
+
+Runs with box kernel smoothing via lsq for a level of neighborhoods with certain polys and extends of epsilon of the kernel:
+
+Set   Poly    level   times (epsilon=times of delta)
+1	2	1       2
+2	2	2	2
+3	2	2	3
+4	2	3	2
+5	2	3	3
+6	2	4	3
+7	3	2	3
+8	3	3	3
+9	4	2	2
+10	4	3	3
+11	3	2	2

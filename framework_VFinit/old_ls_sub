@@ -1,0 +1,10 @@
+  elemental subroutine set_LS(ce)
+  class(mf_FV), intent(inout) :: ce
+  if (ce%Ci > 0d0 .and. ce%Ci < 1d0) then ! the LS value is known
+     ce%LS = sign(1d0,ce%Ci-5d-1)*norm(ce%plic%p0-ce%pc)
+  else if (ce%tag) then
+     ce%LS = sign(1d0,ce%Ci-5d-1)*minval(norm2(ce%pc-mfFVs%plic%p0),mfFVs%Ci > 0d0 .and. mfFVs%Ci < 1d0)
+  else
+     ce%LS = 0d0
+  end if
+  end subroutine set_LS 

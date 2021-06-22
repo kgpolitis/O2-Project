@@ -1,0 +1,915 @@
+  subroutine NLSQ4N_int(ce,k)
+  !use ieee_exceptions
+  use fholder_systslv
+  class(mf_FV), intent(inout) :: ce
+  integer, intent(in) :: k
+  type(point), dimension(:), allocatable :: ps      ! sample points
+  real(kind(0.d0)), dimension(:), allocatable :: qs, ws ! sample values
+  real(kind(0.d0)), dimension(7) :: p0, p  ! vector of parameters previous/current guess
+  real(kind(0.d0)), dimension(7,7) :: A  ! lhs matrix
+  real(kind(0.d0)), dimension(7,1) :: b   ! lhs vector
+  integer :: i1, j1, k1, ansi, ansj, ansk, iter
+  real(kind(0.d0)) :: sErrsq, sErrsq0, lamda
+ 
+  if ( ce%Ci == 0d0 .or. ce%Ci == 1d0 ) then
+     
+     ce%pqicnormal = vec0
+    
+  else
+     
+     ! Sample is taken from the k-th order neighborhood
+     allocate(ps(ce%neighsj(k)+1),qs(ce%neighsj(k)+1), ws(ce%neighsj(k)+1))
+     ps(1) = ce%pc
+     ps(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%pc
+     qs(1) = ce%Ci
+     qs(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%Ci
+     ws=weight(qs)
+     
+     ! initial guess by plic
+     p(1)=5d-1
+     p(2)=(ce%Vc)**(1d0/3d0)*75d-2
+     p(3)=ce%pqicnormal%vx
+     p(4)=ce%pqicnormal%vy
+     p(5)=ce%pqicnormal%vz
+     !p(6)=(-1d0)*(ce%plic%p0-O)*ce%plic%unit_normal
+     !p(3)=(-1d0)*unit(ce%pc-O)*ii
+     !p(4)=(-1d0)*unit(ce%pc-O)*jj
+     !p(5)=(-1d0)*unit(ce%pc-O)*kk
+     p(6)=(-1d0)*(ce%plic%p0-O)*ce%pqicnormal
+     p(7)=1d0
+     sErrsq0=sum((qs-q(ps))**2*ws**2)
+ 
+     ! initialize interation counter
+     iter = 0
+     
+     if (sErrsq0>1d-6) then
+     
+     lamda = 1d-5
+     ! if you set lamda to zero then Lebenberg-Marquant's method is off
+     
+     do 
+     
+     !update iteration number
+     iter = iter + 1
+     if (iter == 1000)  exit
+     
+     ! Construction of the matrix of coefficients A
+     forall(i1=1:7,j1=1:7) A(i1,j1)=sum(dqdp(j1,ps)*dqdp(i1,ps)*ws**2-(qs-q(ps))*d2qdpidpj(i1,j1,ps)*ws**2)
+     
+     ! Levenberg-Marquandt
+     forall (i1=1:7) A(i1,i1)=(lamda+1d0)*A(i1,i1)
+     
+     ! rhs vector
+     forall(i1=1:7) b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps)*ws**2)
+     
+     ! Linear System solve
+     call gaussj(A,b)
+     
+     ! check for singular flag
+     if (singular_flag) then
+       print *, ' SINGULAR FLAG RAISED' 
+       p(1)=5d-1
+       p(2)=(ce%Vc)**(1d0/3d0)*75d-2
+       p(3)=-1d0*ce%plic%unit_normal%vx*5d-1
+       p(4)=-1d0*ce%plic%unit_normal%vy*75d-2
+       p(5)=-1d0*ce%plic%unit_normal%vz*25d-2
+       p(6)=(-1d0)*(ce%plic%p0-O)*ce%plic%unit_normal
+       p(7)=1d0
+     end if
+     
+     ! keep old parameter values and update
+     p0=p
+     p = b(:,1) + p
+     
+     sErrsq=sum((qs-q(ps))**2*ws**2)
+     !print *, sErrsq 
+     
+     if ( sErrsq < sErrsq0 ) then
+       
+       forall(i1=1:7)
+         b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps))
+       end forall
+       lamda = lamda / adj_lamda
+       
+       if (all(abs(b)<1d-8)) exit
+       sErrsq0 = sErrsq
+       
+     else
+       
+       p=p0
+       
+       lamda = lamda * adj_lamda
+       if (lamda>1d6) exit
+       !print *, lamda
+       
+     end if
+     
+     end do
+     
+     end if
+     
+     !print *, sErrsq, ' after iter=', iter, ' with lamda=', lamda
+     
+     ce%pqicnormal%vx = p(3)
+     ce%pqicnormal%vy = p(4)
+     ce%pqicnormal%vz = p(5)
+     
+     ce%pqicnormal = ce%pqicnormal/norm(ce%pqicnormal)
+     
+  end if
+  
+  contains
+  
+  real(kind(0.d0)) elemental function th(r) result(helpfunction)
+  type(point), intent(in) :: r
+  helpfunction = tanh((p(3)*r%x+p(4)*r%y+p(5)*r%z+p(6))/p(2))
+  end function th 
+ 
+  real(kind(0.d0)) elemental function q(r) result(model)
+  type(point), intent(in) :: r
+  model = p(1)*th(r)+p(7)/2d0
+  end function q
+  
+  real(kind(0.d0)) elemental function weight(ci) result(wei)
+  real(kind(0.d0)), intent(in) :: ci
+  !wei=5d-1/2d-1*exp(-abs(ci-5d-1)/2d-1)
+  wei=1d0
+  end function weight
+ 
+  real(kind(0.d0)) elemental function dqdp(i,r) result(dmdpi)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i
+  select case(i)
+  case(1) ! derivative over p1
+     dmdpi = th(r)
+  case(2) ! derivative over p2 
+     dmdpi = ( -p(1)/p(2)**2 ) * (1d0-th(r)**2) * (p(3)*r%x+p(4)*r%y+p(5)*r%z+p(6))
+  case(3) ! ...
+     dmdpi = ( p(1)*r%x/p(2) ) * (1d0-th(r)**2)
+  case(4)
+     dmdpi = ( p(1)*r%y/p(2) ) * (1d0-th(r)**2)
+  case(5)
+     dmdpi = ( p(1)*r%z/p(2) ) * (1d0-th(r)**2)
+  case(6)
+     dmdpi = (   p(1)/p(2)   ) * (1d0-th(r)**2)
+  case(7)
+     dmdpi = 5d-1
+  end select
+  end function dqdp
+  
+  real(kind(0.d0)) elemental function d2qdpidpj(i,j,r) result(d2mdpidpj)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i, j
+  integer :: ih, jh
+  real(kind(0.d0)) :: h1, h2
+  h1 = th(r)
+  h2 = (p(3)*r%x+p(4)*r%y+p(5)*r%z+p(6))
+  if (j<i) then
+     ih=j
+     jh=i
+  else
+     ih=i
+     jh=j
+  end if
+  select case(ih) 
+  case(1) ! derivative over p1 
+     select case(jh)
+     case(1) ! derivative over p1
+       d2mdpidpj = 0d0
+     case(2) ! derivative over p2
+       d2mdpidpj = (-1d0/p(2)**2) * (1d0-h1**2) * h2
+     case(3) ! ...
+       d2mdpidpj = ( r%x/p(2)   ) * (1d0-h1**2)
+     case(4) 
+       d2mdpidpj = ( r%y/p(2)   ) * (1d0-h1**2)
+     case(5)
+       d2mdpidpj = ( r%z/p(2)   ) * (1d0-h1**2)
+     case(6)
+       d2mdpidpj = ( 1d0/p(2)   ) * (1d0-h1**2)
+     case(7)
+       d2mdpidpj = 0d0
+     end select
+  case(2) ! derivative over p2 
+     select case(jh)
+     case(2) ! derivative over p2
+       d2mdpidpj = (  -2d0*p(1)/p(2)**4   ) * (1d0-h1**2) * h1 * h2**2 &
+                 + (   2d0*p(1)/p(2)**3   ) * (1d0-h1**2) * h2
+     case(3) ! ...
+       d2mdpidpj = ( 2d0*p(1)*r%x/p(2)**3 ) * (1d0-h1**2) * h1 * h2    &
+                 + (    -p(1)*r%x/p(2)**2 ) * (1d0-h1**2)
+     case(4) 
+       d2mdpidpj = ( 2d0*p(1)*r%y/p(2)**3 ) * (1d0-h1**2) * h1 * h2    &
+                 + (    -p(1)*r%y/p(2)**2 ) * (1d0-h1**2)
+     case(5)
+       d2mdpidpj = ( 2d0*p(1)*r%z/p(2)**3 ) * (1d0-h1**2) * h1 * h2    &
+                 + (    -p(1)*r%z/p(2)**2 ) * (1d0-h1**2)
+     case(6)
+       d2mdpidpj = (   2d0*p(1)/p(2)**3   ) * (1d0-h1**2) * h1 * h2    &
+                 + (      -p(1)/p(2)**2   ) * (1d0-h1**2)
+     case(7)
+       d2mdpidpj = 0d0
+     end select
+  case(3) 
+     select case(jh)
+     case(3)
+       d2mdpidpj = ( -2d0*p(1)*r%x**2 /p(2)**2 ) * (1d0-h1**2) * h1
+     case(4)
+       d2mdpidpj = ( -2d0*p(1)*r%x*r%y/p(2)**2 ) * (1d0-h1**2) * h1
+     case(5)
+       d2mdpidpj = ( -2d0*p(1)*r%x*r%z/p(2)**2 ) * (1d0-h1**2) * h1
+     case(6)
+       d2mdpidpj = ( -2d0*p(1)*r%x    /p(2)**2 ) * (1d0-h1**2) * h1
+     case(7)
+       d2mdpidpj = 0d0
+     end select
+  case(4)
+     select case(jh)
+     case(4)
+       d2mdpidpj = ( -2d0*p(1)*r%y**2 /p(2)**2 ) * (1d0-h1**2) * h1
+     case(5)
+       d2mdpidpj = ( -2d0*p(1)*r%y*r%z/p(2)**2 ) * (1d0-h1**2) * h1 
+     case(6)
+       d2mdpidpj = ( -2d0*p(1)*r%y    /p(2)**2 ) * (1d0-h1**2) * h1 
+     case(7)
+       d2mdpidpj = 0d0
+     end select
+  case(5)
+     select case(jh)
+     case(5)
+       d2mdpidpj = ( -2d0*p(1)*r%z**2 /p(2)**2 ) * (1d0-h1**2) * h1
+     case(6)
+       d2mdpidpj = ( -2d0*p(1)*r%z    /p(2)**2 ) * (1d0-h1**2) * h1 
+     case(7)
+       d2mdpidpj = 0d0
+     end select
+  case(6)
+     select case(jh)
+     case(6)
+       d2mdpidpj = ( -2d0*p(1)/p(2)**2 ) * (1d0-h1**2) * h1
+     case(7)
+       d2mdpidpj = 0
+     end select
+  case(7) 
+     d2mdpidpj = 0
+  end select
+   
+  end function d2qdpidpj
+  
+  end subroutine NLSQ4N_int
+ 
+  
+  subroutine NLSQ4N_int3(ce,k)
+  !use ieee_exceptions
+  use fholder_systslv
+  use fholder_garithm
+  class(mf_FV), intent(inout) :: ce
+  integer, intent(in) :: k
+  type(point), dimension(:), allocatable :: ps      ! sample points
+  real(kind(0.d0)), dimension(:), allocatable :: qs, ws ! sample values, weights
+  real(kind(0.d0)), dimension(4) :: p0, p  ! vector of parameters previous/current guess
+  real(kind(0.d0)), dimension(4,4) :: A  ! lhs matrix
+  real(kind(0.d0)), dimension(4,1) :: b   ! lhs vector
+  integer :: i1, j1, k1, iter
+  real(kind(0.d0)) :: sErrsq, sErrsq0, lamda
+  logical :: failed_conv
+   
+  if ( ce%Ci == 0d0 .or. ce%Ci == 1d0 ) then
+     
+     ce%pqicnormal = vec0
+    
+  else
+     
+     
+     ! Sample is taken from the k-th order neighborhood
+     allocate(ps(ce%neighsj(k)+1),qs(ce%neighsj(k)+1),ws(ce%neighsj(k)+1))
+     ps(1) = ce%pc
+     ps(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%pc
+     qs(1) = ce%Ci
+     qs(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%Ci
+     ws = weight(ps)
+     
+     ! initial guess by plic
+     !p(3)=acos(-1d0*kk*unit(ce%pc-O))
+     !p(2)=atan2(-1d0*jj*unit(ce%pc-O)/sin(p(3)),-1d0*ii*unit(ce%pc-O)/sin(p(3)))
+     !p(4)=-1d0*(ce%plic%p0-O)*ce%plic%unit_normal
+     p(1)=(ce%Vc)**(1d0/3d0)*75d-2
+     p(3)=acos(ce%pqicnormal%vz)
+     if ( are_equal(p(3),0d0,1d-6) .or. are_equal(p(3),pi,1d-6) ) then
+       p(2)=0d0
+     else
+       p(2)=atan2(ce%pqicnormal%vy/sin(p(3)),ce%pqicnormal%vx/sin(p(3)))
+     end if
+     p(4)=(-1d0)*(ce%plic%p0%x*cos(p(2))*sin(p(3)) + ce%plic%p0%y*sin(p(2))*sin(p(3)) + ce%plic%p0%z*cos(p(3)))
+     
+     sErrsq0=sum((qs-q(ps))**2*ws**2)
+     ! initialize interation counter
+     iter = 0
+     
+     if (sErrsq0>1d-6) then
+       
+       lamda = 1d-5
+       ! if you set lamda to zero then Lebenberg-Marquant's method is off
+      
+       do 
+         
+         !update iteration number
+         iter = iter + 1
+         if (iter == 1000)  then
+           print *, ' reached iter max'
+           !print *, abs(b)
+           !print *, sErrsq
+           exit
+         end if
+         
+         ! Construction of the matrix of coefficients A
+         forall(i1=1:4,j1=1:4) A(i1,j1)=sum(dqdp(j1,ps)*dqdp(i1,ps)*ws**2-(qs-q(ps))*d2qdpidpj(i1,j1,ps)*ws**2)
+         
+         ! Levenberg-Marquandt
+         forall (i1=1:4) A(i1,i1)=(lamda+1d0)*A(i1,i1)
+         
+         ! rhs vector
+         forall(i1=1:4) b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps)*ws**2)
+         
+         ! Linear System solve
+         call gaussj(A,b)
+         
+         ! check for singular flag
+         if (singular_flag) then
+           print *, ' SINGULAR FLAG RAISED' 
+         end if
+         
+         ! keep old parameter values and update
+         p0=p
+         p = b(:,1) + p
+         
+         sErrsq=sum((qs-q(ps))**2*ws**2)
+         !print *, sErrsq 
+         
+         if ( sErrsq < sErrsq0 ) then
+           
+           forall(i1=1:4) b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps)*ws**2)
+           lamda = lamda / adj_lamda
+           
+           if (all(abs(b)<1d-6)) then
+             !print *, 'converged'
+             if (failed_conv) then ! print *, 'converged', iter, sErrsq
+               forall(i1=1:3,j1=1:3) A(i1,j1)=sum(dqdp(j1,ps)*dqdp(i1,ps)*ws**2-(qs-q(ps))*d2qdpidpj(i1,j1,ps)*ws**2)
+               call gaussj(A,b)
+               p = b(:,1) + p
+             end if
+             exit
+           end if
+           sErrsq0 = sErrsq
+           
+         else
+          
+           p=p0
+           
+           lamda = lamda * adj_lamda
+          
+           if (lamda>1d2) then
+             !print *, 'did not converge'
+             !exit
+             ! reset lamda, p(1), p(4)
+             !exit
+             lamda=1d-5
+             p(1)=(ce%Vc)**(1d0/3d0)*75d-2
+             failed_conv=.true.
+             p(4)=(-1d0)*(ce%plic%p0%x*cos(p(2))*sin(p(3)) + ce%plic%p0%y*sin(p(2))*sin(p(3)) + ce%plic%p0%z*cos(p(3)))
+             !print *, p(1), p(2),p(3), p(4)
+             !p(4)=0d0
+             !p(4)=(ps(1)%x*cos(p(2))*sin(p(3)) + ps(1)%y*sin(p(2))*sin(p(3)) + ps(1)%z*cos(p(3)))-atanh(2d0*qs(1)-1d0)*p(1)
+             sErrsq0=sum((qs-q(ps))**2*ws**2)
+           end if
+           
+         end if
+         
+       end do
+       
+     end if
+     
+     !print *, sErrsq, ' after iter=', iter, ' with lamda=', lamda
+     
+     ce%pqicnormal%vx = cos(p(2))*sin(p(3))
+     ce%pqicnormal%vy = sin(p(2))*sin(p(3))
+     ce%pqicnormal%vz = cos(p(3))
+     
+     ce%pqicnormal = ce%pqicnormal/norm(ce%pqicnormal)
+     
+  end if
+  
+  contains
+  
+  real(kind(0.d0)) elemental function th(r) result(helpfunction)
+  type(point), intent(in) :: r
+  helpfunction = tanh((cos(p(2))*sin(p(3))*r%x+sin(p(2))*sin(p(3))*r%y+cos(p(3))*r%z+p(4))/p(1))
+  !helpfunction = tanh((p(2)*r%x+p(3)*r%y+p(4)*r%z+p(5))/p(1))
+  end function th 
+ 
+  real(kind(0.d0)) elemental function q(r) result(model)
+  type(point), intent(in) :: r
+  model = 5d-1*th(r)+5d-1
+  end function q
+  
+  real(kind(0.d0)) elemental function weight(r) result(wei)
+  type(point), intent(in) :: r
+  !wei=1d0-exp(-(ci-5d-1)**2/5d-3)
+  wei=(ce%Vc)**(1d0/3d0)*75d-2/(norm(r-ce%pc)+1d-1)
+  !wei=1d0
+  end function weight
+  
+  real(kind(0.d0)) elemental function dqdp(i,r) result(dmdpi)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i
+  select case(i)
+  case(1) ! derivative over p1 
+     dmdpi = ( -5d-1/p(1)**2 ) * (1d0-th(r)**2) * (cos(p(2))*sin(p(3))*r%x+sin(p(2))*sin(p(3))*r%y+cos(p(3))*r%z+p(4))
+  case(2) ! ...
+     dmdpi = ( 5d-1*(r%y*cos(p(2))*sin(p(3))-r%x*sin(p(2))*sin(p(3)))/p(1) ) * (1d0-th(r)**2)
+  case(3)
+     dmdpi = ( 5d-1*(r%y*sin(p(2))*cos(p(3))+r%x*cos(p(2))*cos(p(3))-r%z*sin(p(3)))/p(1) ) * (1d0-th(r)**2)
+  case(4)
+     dmdpi = ( 5d-1/p(1) ) * (1d0-th(r)**2)
+  end select
+  end function dqdp
+  
+  real(kind(0.d0)) elemental function d2qdpidpj(i,j,r) result(d2mdpidpj)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i, j
+  integer :: ih, jh
+  real(kind(0.d0)) :: h1, h2
+  h1 = th(r)
+  h2 = (cos(p(2))*sin(p(3))*r%x+sin(p(2))*sin(p(3))*r%y+cos(p(3))*r%z+p(4))
+  if (j<i) then
+     ih=j
+     jh=i
+  else
+     ih=i
+     jh=j
+  end if
+  select case(ih) 
+  case(1) ! derivative over p1 
+     select case(jh)
+     case(1) ! derivative over p1
+       d2mdpidpj = (h1**2-1d0)*h2/p(1)**3*(h1*h2/p(1)-1d0)
+     case(2) ! derivative over p2
+       d2mdpidpj = (r%y*cos(p(2))*sin(p(3))-r%x*sin(p(2))*sin(p(3)))*(h1**2-1d0)/p(1)**2*(5d-1-h1*h2/p(1))
+     case(3) ! ...
+       d2mdpidpj = (r%y*sin(p(2))*cos(p(3))+r%x*cos(p(2))*cos(p(3))-r%z*sin(p(3)))*(h1**2-1d0)/p(1)**2*(5d-1-h1*h2/p(1))
+     case(4) 
+       d2mdpidpj = (h1**2-1d0)/p(1)**2*(5d-1-h1*h2/p(1))	
+     end select
+  case(2) ! derivative over p2 
+     select case(jh)
+     case(2) ! derivative over p2
+       d2mdpidpj = (h1**2-1d0)/p(1)*((r%x*cos(p(2))*sin(p(3))+r%y*sin(p(2))*sin(p(3)))/2d0+h1/p(1)*(r%y*cos(p(2))*sin(p(3))-r%x*sin(p(2))*sin(p(3)))**2)
+     case(3) ! ...
+       d2mdpidpj = (h1**2-1d0)/p(1)*(h1/p(1)*(r%y*cos(p(2))*sin(p(3))-r%x*sin(p(2))*sin(p(3)))*(r%x*cos(p(2))*cos(p(3))+r%y*cos(p(3))*sin(p(2))-r%z*sin(p(3))) &
+                   -5d-1*(r%y*cos(p(2))*cos(p(3))-r%x*cos(p(3))*sin(p(2))))
+     case(4) 
+       d2mdpidpj = h1*(h1**2-1d0)/p(1)**2*(r%y*cos(p(2))*sin(p(3))-r%x*sin(p(2))*sin(p(3)))
+     end select
+  case(3) 
+     select case(jh)
+     case(3)
+       d2mdpidpj = (h1**2-1d0)/p(1)*(5d-1*(r%z*cos(p(3))+r%x*cos(p(2))*sin(p(3))+r%y*sin(p(2))*sin(p(3)))+h1/p(1)*(r%x*cos(p(2))*cos(p(3))+r%y*sin(p(2))*cos(p(3))-r%z*sin(p(3)))**2)
+     case(4)
+       d2mdpidpj = h1*(h1**2-1d0)/p(1)**2*(r%x*cos(p(2))*cos(p(3))+r%y*cos(p(3))*sin(p(2))-r%z*sin(p(3)))
+     end select
+  case(4)
+     select case(jh)
+     case(4)
+       d2mdpidpj = h1*(h1**2-1d0)/p(1)**2
+     end select
+  end select
+   
+  end function d2qdpidpj
+  
+  end subroutine NLSQ4N_int3
+ 
+  subroutine NLSQ4N_int4(ce,k)
+  !use ieee_exceptions
+  use fholder_garithm
+  use fholder_systslv
+  class(mf_FV), intent(inout) :: ce
+  integer, intent(in) :: k
+  type(point), dimension(:), allocatable :: ps      ! sample points
+  real(kind(0.d0)), dimension(:), allocatable :: qs, ws ! sample values, weights
+  real(kind(0.d0)), dimension(2) :: p0, p  ! vector of parameters previous/current guess
+  real(kind(0.d0)), dimension(2,2) :: A  ! lhs matrix
+  real(kind(0.d0)), dimension(2,1) :: b   ! lhs vector
+  integer :: i1, j1, k1, iter
+  real(kind(0.d0)) :: sErrsq, sErrsq0, e, d, lamda
+  logical :: failed_conv
+ 
+  if ( ce%Ci == 0d0 .or. ce%Ci == 1d0 ) then
+     
+     ce%pqicnormal = vec0
+    
+  else
+     
+     ! Starting Guess of parameter vector
+     !p(1)=3d-2
+     !p(2)=(ce%Vc)**(1d0/3d0)
+     
+     ! Sample is taken from the k-th order neighborhood
+     allocate(ps(ce%neighsj(k)+1),qs(ce%neighsj(k)+1),ws(ce%neighsj(k)+1))
+     ps(1) = ce%pc
+     ps(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%pc
+     qs(1) = ce%Ci
+     qs(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%Ci
+     ws = weight(qs)
+     
+     ! initial guess by plic
+     !p(2)=acos(-1d0*ce%plic%unit_normal%vz)
+     !p(1)=atan2(-1d0*ce%plic%unit_normal%vy/sin(p(2)),-1d0*ce%plic%unit_normal%vx/sin(p(2)))
+     p(2)=acos(ce%pqicnormal%vz)
+     if ( are_equal(p(2),0d0,1d-6) .or. are_equal(p(2),pi,1d-6) ) then
+       p(1)=0d0
+     else
+       p(1)=atan2(ce%pqicnormal%vy/sin(p(2)),ce%pqicnormal%vx/sin(p(2)))
+     end if
+     !d=(ce%plic%p0-O)*ce%plic%unit_normal
+     d=(-1d0)*(ce%plic%p0%x*cos(p(1))*sin(p(2)) + ce%plic%p0%y*sin(p(1))*sin(p(2)) + ce%plic%p0%z*cos(p(2)))
+     !e=(cos(p(1))*sin(p(2))*ps(1)%x+sin(p(1))*sin(p(2))*ps(1)%y+cos(p(2))*ps(1)%z+d)/atanh(2d0*qs(1)-1d0)
+     e=(ce%Vc)**(1d0/3d0)*75d-2
+     sErrsq0=sum((qs-q(ps))**2*ws**2)
+     !print *, sErrsq0
+     ! initialize interation counter
+     iter = 0
+     
+     if (sErrsq0>1d-6) then
+      
+       lamda = 1d-5
+       ! if you set lamda to zero then Lebenberg-Marquant's method is off
+       
+       do 
+         
+         !update iteration number
+         iter = iter + 1
+         if (iter == 1000) then
+           print *, ' reached max iter'
+           exit
+         end if
+         
+         ! Construction of the matrix of coefficients A
+         forall(i1=1:2,j1=1:2) A(i1,j1)=sum(dqdp(j1,ps)*dqdp(i1,ps)*ws**2-(qs-q(ps))*d2qdpidpj(i1,j1,ps)*ws**2)
+         
+         ! Levenberg-Marquandt
+         forall (i1=1:2) A(i1,i1)=(lamda+1d0)*A(i1,i1)
+         
+         ! rhs vector
+         forall(i1=1:2) b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps)*ws**2)
+         
+         ! Linear System solve
+         call gaussj(A,b)
+         
+         ! check for singular flag
+         if (singular_flag) then
+           print *, ' SINGULAR FLAG RAISED' 
+         end if
+         
+         ! keep old parameter values and update
+         p0=p
+         p = b(:,1) + p
+         !d=(-1d0)*(ce%plic%p0%x*cos(p(1))*sin(p(2)) + ce%plic%p0%y*sin(p(1))*sin(p(2)) + ce%plic%p0%z*cos(p(2)))
+         
+         sErrsq=sum((qs-q(ps))**2*ws**2)
+         !print *, sErrsq 
+         
+         if ( sErrsq < sErrsq0 ) then
+           
+           forall(i1=1:2)
+             b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps)*ws**2)
+           end forall
+           lamda = lamda / adj_lamda
+           
+           if (all(abs(b)<1d-8)) then
+             if (failed_conv) print *, 'converged'
+             exit
+           end if
+           sErrsq0 = sErrsq
+           
+         else
+           
+           p=p0
+           !d=(-1d0)*(ce%plic%p0%x*cos(p(1))*sin(p(2)) + ce%plic%p0%y*sin(p(1))*sin(p(2)) + ce%plic%p0%z*cos(p(2)))
+          
+           lamda = lamda * adj_lamda
+           
+           if (lamda>1d6) then
+             print *, 'did not converge'
+             failed_conv=.true.
+             exit
+             ! reset lamda, p(1), p(2)
+             lamda=5d-1
+             
+             sErrsq0=sum((qs-q(ps))**2*ws**2)
+             print *, 'did not converge'
+           end if
+          
+         end if
+         
+       end do
+       
+     else
+       
+       print *, 'sErr<10d-6 ;)'
+       
+     end if
+     
+     !print *, sErrsq, ' after iter=', iter, ' with lamda=', lamda
+     
+     ce%pqicnormal%vx = cos(p(1))*sin(p(2))
+     ce%pqicnormal%vy = sin(p(1))*sin(p(2))
+     ce%pqicnormal%vz = cos(p(2))
+     
+     ce%pqicnormal = ce%pqicnormal/norm(ce%pqicnormal)
+     
+  end if
+  
+  contains
+  
+  real(kind(0.d0)) elemental function th(r) result(helpfunction)
+  type(point), intent(in) :: r
+  helpfunction = tanh((cos(p(1))*sin(p(2))*r%x+sin(p(1))*sin(p(2))*r%y+cos(p(2))*r%z+d)/e)
+  !helpfunction = tanh((p(2)*r%x+p(3)*r%y+p(4)*r%z+p(5))/p(1))
+  end function th 
+ 
+  real(kind(0.d0)) elemental function q(r) result(model)
+  type(point), intent(in) :: r
+  model = 5d-1*th(r)+5d-1
+  end function q
+   
+  real(kind(0.d0)) elemental function weight(ci) result(wei)
+  real(kind(0.d0)), intent(in) :: ci
+  !wei=5d-1/2d0*exp(-abs(ci-5d-1)/2d-0)
+  wei=1d0
+  end function weight
+ 
+  real(kind(0.d0)) elemental function dqdp(i,r) result(dmdpi)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i
+  select case(i)
+  case(1) ! derivative over p1 
+     dmdpi = ( 5d-1/e ) * (1d0-th(r)**2) * (-sin(p(1))*sin(p(2))*r%x + cos(p(1))*sin(p(2))*r%y)
+  case(2) ! ...
+     dmdpi = ( 5d-1/e ) * (1d0-th(r)**2) * ( cos(p(1))*cos(p(2))*r%x + sin(p(1))*cos(p(2))*r%y - sin(p(2))*r%z)
+  end select
+  end function dqdp
+  
+  real(kind(0.d0)) elemental function d2qdpidpj(i,j,r) result(d2mdpidpj)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i, j
+  integer :: ih, jh
+  real(kind(0.d0)) :: h1, h2
+  h1 = th(r)
+  h2 = (cos(p(1))*sin(p(2))*r%x+sin(p(1))*sin(p(2))*r%y+cos(p(2))*r%z+d)
+  if (j<i) then
+     ih=j
+     jh=i
+  else
+     ih=i
+     jh=j
+  end if
+  select case(ih) 
+  case(1) ! derivative over p1 
+     select case(jh)
+     case(1) ! derivative over p1
+       d2mdpidpj = (h1**2-1d0)/e * ( 5d-1*(cos(p(1))*sin(p(2))*r%x+sin(p(1))*sin(p(2))*r%y) + h1/e*(cos(p(1))*sin(p(2))*r%y-sin(p(1))*sin(p(2))*r%x)**2 )
+     case(2) ! derivative over p2
+       d2mdpidpj = (h1**2-1d0)/e * ( h1/e*(cos(p(1))*sin(p(2))*r%y-sin(p(1))*sin(p(2))*r%x)*(cos(p(1))*cos(p(2))*r%x+sin(p(1))*cos(p(2))*r%y-sin(p(2))*r%z) &
+                                   - 5d-1*(cos(p(1))*cos(p(2))*r%y-sin(p(1))*cos(p(2))*r%x) )
+     end select
+  case(2) ! derivative over p2 
+     select case(jh)
+     case(2) ! derivative over p2
+       d2mdpidpj = (h1**2-1d0)/e * ( 5d-1*(cos(p(1))*sin(p(2))*r%x+sin(p(1))*sin(p(2))*r%y+cos(p(2))*r%z) + h1/e*(cos(p(1))*cos(p(2))*r%x+sin(p(1))*cos(p(2))*r%y-sin(p(2))*r%z)**2 )
+     end select
+  end select
+   
+  end function d2qdpidpj
+  
+  end subroutine NLSQ4N_int4
+ 
+  
+  
+  subroutine NLSQ4N_int5(ce,k)
+  !use ieee_exceptions
+  use fholder_systslv
+  use fholder_garithm
+  class(mf_FV), intent(inout) :: ce
+  integer, intent(in) :: k
+  type(point), dimension(:), allocatable :: ps          ! sample points
+  real(kind(0.d0)), dimension(:), allocatable :: qs, ws ! sample values, weights
+  real(kind(0.d0)), dimension(3) :: p0, p               ! vector of parameters previous/current guess
+  real(kind(0.d0)), dimension(3,3) :: A                 ! lhs matrix
+  real(kind(0.d0)), dimension(3,1) :: b                 ! rhs vector
+  integer :: i1, j1, k2, iter
+  real(kind(0.d0)) :: sErrsq, sErrsq0, lamda, e, dmin, dmax
+  logical :: failed_conv
+ 
+  if ( ce%Ci == 0d0 .or. ce%Ci == 1d0 ) then
+     !print *, 'ok'
+     ce%pqicnormal = vec0
+    
+  else
+     
+     
+     ! Sample is taken from the k-th order neighborhood
+     allocate(ps(ce%neighsj(k)+1),qs(ce%neighsj(k)+1),ws(ce%neighsj(k)+1))
+     ps(1) = ce%pc
+     ps(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%pc
+     qs(1) = ce%Ci
+     qs(2:ce%neighsj(k)+1) = mfFVs(ce%neighs(1:ce%neighsj(k)))%Ci
+     ws = weight(ps)
+     
+     ! initial guess by plic
+     e=(ce%Vc)**(1d0/3d0)*55d-2
+     p(2)=acos(ce%pqicnormal%vz)
+     if ( are_equal(p(2),0d0,1d-6) .or. are_equal(p(2),pi,1d-6) ) then
+       p(1)=0d0
+     else
+       p(1)=atan2(ce%pqicnormal%vy/sin(p(2)),ce%pqicnormal%vx/sin(p(2)))
+     end if
+     p(3)=(-1d0)*(ce%plic%p0%x*cos(p(1))*sin(p(2)) + ce%plic%p0%y*sin(p(1))*sin(p(2)) + ce%plic%p0%z*cos(p(2)))
+     !p(3)=(-1d0)*(ce%pc%x*cos(p(1))*sin(p(2)) + ce%pc%y*sin(p(1))*sin(p(2)) + ce%pc%z*cos(p(2)))
+     
+     !k2=3
+     !dmin=minval(abs((mfFVs(ce%neighs(1:ce%neighsj(k2)))%pc%x*cos(p(1))*sin(p(2))+mfFVs(ce%neighs(1:ce%neighsj(k2)))%pc%y*sin(p(1))*sin(p(2))+mfFVs(ce%neighs(1:ce%neighsj(k2)))%pc%z*cos(p(2))+p(3))),mfFVs(ce%neighs(1:ce%neighsj(k2)))%ci==minval(mfFVs(ce%neighs(1:ce%neighsj(k2)))%ci))
+     !dmax=minval(abs((mfFVs(ce%neighs(1:ce%neighsj(k2)))%pc%x*cos(p(1))*sin(p(2))+mfFVs(ce%neighs(1:ce%neighsj(k2)))%pc%y*sin(p(1))*sin(p(2))+mfFVs(ce%neighs(1:ce%neighsj(k2)))%pc%z*cos(p(2))+p(3))),mfFVs(ce%neighs(1:ce%neighsj(k2)))%ci==maxval(mfFVs(ce%neighs(1:ce%neighsj(k2)))%ci))
+     !e=(dmax+dmin)/1.2d0
+     
+     sErrsq0=sum((qs-q(ps))**2*ws**2)
+     ! initialize interation counter
+     iter = 0
+     
+     if (sErrsq0>1d-6) then
+       
+       lamda = 1d-5
+       ! if you set lamda to zero then Lebenberg-Marquant's method is off
+      
+       do 
+         
+         !update iteration number
+         iter = iter + 1
+         !print *, iter
+         if (iter == 1000)  then
+           print *, ' reached iter max'
+           exit
+         end if
+         
+         ! Construction of the matrix of coefficients A
+         forall(i1=1:3,j1=1:3) A(i1,j1)=sum(dqdp(j1,ps)*dqdp(i1,ps)*ws**2-(qs-q(ps))*d2qdpidpj(i1,j1,ps)*ws**2)
+         
+         ! Levenberg-Marquandt
+         forall (i1=1:3) A(i1,i1)=(lamda+1d0)*A(i1,i1)
+         
+         ! rhs vector
+         forall(i1=1:3) b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps)*ws**2)
+         
+         ! Linear System solve
+         call gaussj(A,b)
+         
+         ! check for singular flag
+         if (singular_flag) then
+           print *, ' SINGULAR FLAG RAISED' 
+         end if
+         
+         ! keep old parameter values and update
+         p0=p
+         p = b(:,1) + p
+         
+         sErrsq=sum((qs-q(ps))**2*ws**2)
+         !print *, sErrsq 
+         
+         if ( sErrsq < sErrsq0 ) then
+           
+           forall(i1=1:3) b(i1,1)=sum((qs-q(ps))*dqdp(i1,ps)*ws**2)
+           lamda = lamda / adj_lamda
+           
+           if (all(abs(b)<1d-7)) then
+             if (failed_conv) then ! print *, 'converged', iter, sErrsq
+               forall(i1=1:3,j1=1:3) A(i1,j1)=sum(dqdp(j1,ps)*dqdp(i1,ps)*ws**2-(qs-q(ps))*d2qdpidpj(i1,j1,ps)*ws**2)
+               call gaussj(A,b)
+               p = b(:,1) + p
+             end if
+             exit
+           end if
+           
+           sErrsq0 = sErrsq
+           
+         else
+          
+           p=p0
+          
+           lamda = lamda * adj_lamda
+          
+           if (lamda>1d2) then
+             !print *, 'did not converge', iter, sErrsq
+             failed_conv=.true.
+             ! p(3)=(-1d0)*(ce%plic%p0%x*cos(p(1))*sin(p(2)) + ce%plic%p0%y*sin(p(1))*sin(p(2)) + ce%plic%p0%z*cos(p(2)))
+             exit
+             ! reset lamda, p(1), p(2)
+             lamda=1d-5
+             p(3)=(-1d0)*(ce%plic%p0%x*cos(p(1))*sin(p(2)) + ce%plic%p0%y*sin(p(1))*sin(p(2)) + ce%plic%p0%z*cos(p(2)))
+             sErrsq0=sum((qs-q(ps))**2*ws**2)
+           end if
+           
+         end if
+         
+       end do
+       
+     end if
+     
+     !print *, sErrsq, ' after iter=', iter, ' with lamda=', lamda
+     
+     ce%pqicnormal%vx = cos(p(1))*sin(p(2))
+     ce%pqicnormal%vy = sin(p(1))*sin(p(2))
+     ce%pqicnormal%vz = cos(p(2))
+     
+     ce%pqicnormal = ce%pqicnormal/norm(ce%pqicnormal)
+     
+  end if
+  
+  contains
+  
+  real(kind(0.d0)) elemental function th(r) result(helpfunction)
+  type(point), intent(in) :: r
+  helpfunction = tanh((cos(p(1))*sin(p(2))*r%x+sin(p(1))*sin(p(2))*r%y+cos(p(2))*r%z+p(3))/e)
+  !helpfunction = tanh((p(2)*r%x+p(3)*r%y+p(4)*r%z+p(5))/p(1))
+  end function th 
+ 
+  real(kind(0.d0)) elemental function q(r) result(model)
+  type(point), intent(in) :: r
+  model = 5d-1*th(r)+5d-1
+  end function q
+   
+ ! real(kind(0.d0)) elemental function weight(ci) result(wei)
+ ! real(kind(0.d0)), intent(in) :: ci
+ ! !wei=1d0-exp(-(ci-5d-1)**2/5d-3)
+ ! wei=1d0
+ ! end function weight
+ 
+  real(kind(0.d0)) elemental function weight(r) result(wei)
+  type(point), intent(in) :: r
+  !wei=1d0-exp(-(ci-5d-1)**2/5d-3)
+  wei=e/(norm(r-ce%pc)+1d-1)
+  !wei=1d0
+  end function weight
+ 
+  real(kind(0.d0)) elemental function dqdp(i,r) result(dmdpi)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i
+  select case(i)
+  case(1) ! ...
+     dmdpi = ( 5d-1*(r%y*cos(p(1))*sin(p(2))-r%x*sin(p(1))*sin(p(2)))/e ) * (1d0-th(r)**2)
+  case(2)
+     dmdpi = ( 5d-1*(r%y*sin(p(1))*cos(p(2))+r%x*cos(p(1))*cos(p(2))-r%z*sin(p(2)))/e ) * (1d0-th(r)**2)
+  case(3)
+     dmdpi = ( 5d-1/e ) * (1d0-th(r)**2)
+  end select
+  end function dqdp
+  
+  real(kind(0.d0)) elemental function d2qdpidpj(i,j,r) result(d2mdpidpj)
+  type(point), intent(in) :: r
+  integer, intent(in) :: i, j
+  integer :: ih, jh
+  real(kind(0.d0)) :: h1, h2
+  h1 = th(r)
+  h2 = (cos(p(1))*sin(p(1))*r%x+sin(p(1))*sin(p(2))*r%y+cos(p(2))*r%z+p(3))
+  if (j<i) then
+     ih=j
+     jh=i
+  else
+     ih=i
+     jh=j
+  end if
+  select case(ih) 
+  case(1) ! derivative over p1
+     select case(jh)
+     case(1) ! derivative over p1
+       d2mdpidpj = (h1**2-1d0)/e*((r%x*cos(p(1))*sin(p(2))+r%y*sin(p(1))*sin(p(2)))/2d0+h1/e*(r%y*cos(p(1))*sin(p(2))-r%x*sin(p(1))*sin(p(2)))**2)
+     case(2) ! ...
+       d2mdpidpj = (h1**2-1d0)/e*(h1/e*(r%y*cos(p(1))*sin(p(2))-r%x*sin(p(1))*sin(p(2)))*(r%x*cos(p(1))*cos(p(2))+r%y*cos(p(2))*sin(p(1))-r%z*sin(p(2))) &
+                   -5d-1*(r%y*cos(p(1))*cos(p(2))-r%x*cos(p(2))*sin(p(1))))
+     case(3) 
+       d2mdpidpj = h1*(h1**2-1d0)/e**2*(r%y*cos(p(1))*sin(p(2))-r%x*sin(p(1))*sin(p(2)))
+     end select
+  case(2) 
+     select case(jh)
+     case(2)
+       d2mdpidpj = (h1**2-1d0)/e*(5d-1*(r%z*cos(p(2))+r%x*cos(p(1))*sin(p(2))+r%y*sin(p(1))*sin(p(2)))+h1/e*(r%x*cos(p(1))*cos(p(2))+r%y*sin(p(1))*cos(p(2))-r%z*sin(p(2)))**2)
+     case(3)
+       d2mdpidpj = h1*(h1**2-1d0)/e**2*(r%x*cos(p(1))*cos(p(2))+r%y*cos(p(2))*sin(p(1))-r%z*sin(p(2)))
+     end select
+  case(3)
+     select case(jh)
+     case(3)
+       d2mdpidpj = h1*(h1**2-1d0)/e**2
+     end select
+  end select
+   
+  end function d2qdpidpj
+  
+  end subroutine NLSQ4N_int5

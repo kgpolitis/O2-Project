@@ -1,0 +1,10 @@
+------------- Ball radius 0.2 standard cube background
+
+ Find n1 did:  1.700000007986091E-003
+  n1 lasso did  1.999999949475750E-004
+  n1 lasso did  4.000000044470653E-004
+  n1 lasso did  1.600000003236346E-003
+ dynamic search did  8.000000001629815E-003
+ add more last time  6.979999999748543E-002
+ dynamic search did  5.000000004656613E-003
+ add more last time  0.228799999997136

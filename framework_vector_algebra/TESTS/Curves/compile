@@ -1,0 +1,2 @@
+ifort curvy_curves.f90 -o curvy_curves.out \
+ -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva

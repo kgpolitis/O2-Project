@@ -1,0 +1,50 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+  -> Working Parameters 
+      almost_at          =  1.000000000000000E-012
+      a_scale            =  -1.00000000000000     
+      a_small            =  0.000000000000000E+000
+      margin_plus_limit  =  0.000000000000000E+000
+      margin_minus_limit =  0.000000000000000E+000
+      at 2 out lim displ =  0.000000000000000E+000
+      at 2 in  lim displ =  0.000000000000000E+000
+      Bounding boxes not found 
+  
+ ------------------------ Nodes Count ----------------------  
+  
+ ---> in  nodes =       137781
+ ---> out nodes =            0
+ ---> at  nodes =            0
+  
+ ---> sum of nodes check :: ok
+  
+  
+ ------------------------ Faces Count ----------------------  
+  
+ ---> in  faces =       393600
+ ---> out faces =            0
+ ---> at  faces =            0
+ ---> iso faces =            0
+ ---> bad faces =            0
+  
+ ---> sum of faces check :: ok
+  
+  
+ ------------------------- FVs Count -----------------------  
+  
+ ---> in  FVs =       128000
+ ---> out FVs =            0
+ ---> at  FVs =            0
+  
+ ---> sum of FVs check :: ok
+  
+  
+ ----------------------- Trimmed Ci -----------------------  
+  None 
+ ----------------------- Ci looks good ---------------------  
+  
+  ---> Faces with more than two section points: 
+   None 

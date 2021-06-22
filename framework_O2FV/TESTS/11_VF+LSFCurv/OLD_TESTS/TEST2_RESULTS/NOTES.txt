@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 2 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Interpolation corrections are based on ivar
+2. Gradient is used for the interpolation and the corrections
+3. PLIC is not used, ivar Ci values are derived by the subsequent isosurfaces generated
+4. Npasses is 1, after that the algorithm diverges
+
+
+Observations:
+1. This cases check started and a mixed "gradient use approach". First the gradient wasn't used for the
+   interpolation correction. This results to a diverging algorithm similar to TEST1, so afterwards we changed
+   our approach and included the gradient corrections to both interpolation and corrections. We tested the 
+   number of iterations for fixing the ivar values of Ci. We found that 1 pass is enough and afterwards the algorithm
+   diverges.
+1. Introducing more corrections steps results to a diverging algorithm, so npasses=1
+2. The curvature scales correctly, but unfortunately this means that it becomes higher and higher.
+
+

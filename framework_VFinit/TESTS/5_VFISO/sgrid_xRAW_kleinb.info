@@ -1,0 +1,41 @@
+  ---- Surface Grid Generation by RAW capturing data : debug file 
+  ---- Interface's Name is : kleinb
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=         6510
+    > max hash=       319168
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =       10274
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > Hashing for face captured nodes 
+    > Hashing for face captured nodes : DONE 
+    |-> NEW  Surface grid nodes no =       10286
+    |-> Grid extension size is     =          12
+    > Extension to surface grid nodes added 
+    > Adding face captured nodes : DONE 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =       20564
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =       10276
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats
+  - Nodes  :        10286
+  - Edges  :        20564
+  - Bedges :            0
+  - Nvar   :            0
+  - Cells  :        10276
+  - Euler X:           -2

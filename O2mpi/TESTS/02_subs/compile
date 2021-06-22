@@ -1,0 +1,4 @@
+ifort allany.f90 -o allany.out \
+ -I../../../Dlib_lucid/incs \
+ -L../../../Dlib_lucid/archives -lO2mpi -lfva -lgenmods\
+ -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich

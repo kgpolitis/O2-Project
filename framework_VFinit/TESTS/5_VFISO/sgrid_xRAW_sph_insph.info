@@ -1,0 +1,36 @@
+  ---- Surface Grid Generation by RAW capturing data : debug file 
+  ---- Interface's Name is : sph_insph
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=            5
+    > max hash=          391
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =          36
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > NONE FOUND 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =          60
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =          25
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats
+  - Nodes  :           36
+  - Edges  :           60
+  - Bedges :           20
+  - Nvar   :           45
+  - Cells  :           25
+  - Euler X:            1

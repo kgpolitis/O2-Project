@@ -1,0 +1,12 @@
+#!/bin/bash
+cd $ISIS_HOME/Dlib_opts
+echo
+echo " ======================"
+echo " -  Options in use    -"
+echo " >  Compiler:   " 
+ls -l comp_opts.inc
+echo
+echo " >  MPI: "
+ls -l mpi_opts.inc
+echo " ====================="
+echo

@@ -1,0 +1,265 @@
+ 
+ subroutine find_pqic_curvature(ce,k) 
+  use fholder_systslv
+  class(mf_FV) :: ce
+  integer, intent(in) :: k 
+  integer, dimension(:), allocatable :: neighs!, allneighs
+  integer :: i1, j, l
+  integer, dimension(1) :: l1
+  real(kind(0.d0)) , dimension(6,6) :: mA
+  real(kind(0.d0)) , dimension(6,1) :: mb
+  type(vector) ,dimension(:), allocatable :: sample_points
+  type(vector) :: unit_u, unit_v, unit_w, ep
+  ! coefficients a are used for the parabolic interface reconstruction:: w(u,v) = a00 + a10*u + a01*v + a11*xy + a20*x**2 + a02*y**2
+  ! use the subroutine after constructing plic for every cell
+ 
+  ! Find the cell's kth-neighborhood
+  if ( ce%Ci > 0d0 .and. ce%Ci <1d0 ) then
+     
+     allocate(neighs(count(mfFVs(ce%neighs(1:ce%neighsj(k)))%Ci >0d0 .and. mfFVs(ce%neighs(1:ce%neighsj(k)))%Ci <1d0)))
+     l=1
+     do i1=1,ce%neighsj(k)
+       if (mfFVs(ce%neighs(i1))%Ci >0d0 .and. mfFVs(ce%neighs(i1))%Ci <1d0) then 
+         neighs(l) = ce%neighs(i1)
+         l = l + 1
+       end if 
+     end do
+     
+     ! Define a coordinate system Cuvw --> this is required so that a polynomial approximation function is always defined
+     ! find the mean value of the normal vectors used by plic, its unit is going to be unit_w
+     unit_w=unit((sum(mfFVs(neighs)%plic%unit_normal)+ce%plic%unit_normal)/(i1+1d0)) 
+    
+     ! find the cell of the neighborhood that that gives min((pc-pNc)*unit_w), Nc=1,2,..,size(neighs) 
+     l1=minloc((ce%pc-mfFVs(neighs)%pc)*unit_w)
+     unit_v = unit(((ce%pc-mfFVs(neighs(l1(1)))%pc)-((ce%pc-mfFVs(neighs(l1(1)))%pc)*unit_w)*unit_w))
+     unit_u = unit(unit_v .x. unit_w)
+     
+     ! for interface points find the uvw coordinates
+     ! gather interface points and transform from Oxyz to Cuvw
+     l=size(ce%poiarr)-1
+     do i1=1,size(neighs)
+       l=l+size(mfFVs(neighs(i1))%poiarr)-1
+     end do
+     
+     allocate(sample_points(l))
+     
+     sample_points(1:size(ce%poiarr)-1)%vx=(ce%poiarr(1:size(ce%poiarr)-1)-ce%pc)*unit_u
+     sample_points(1:size(ce%poiarr)-1)%vy=(ce%poiarr(1:size(ce%poiarr)-1)-ce%pc)*unit_v 
+     sample_points(1:size(ce%poiarr)-1)%vz=(ce%poiarr(1:size(ce%poiarr)-1)-ce%pc)*unit_w
+     l=size(ce%poiarr)-1
+     
+     do i1=1,size(neighs)
+       sample_points(l+1:l+size(mfFVs(neighs(i1))%poiarr)-1)%vx=(mfFVs(neighs(i1))%poiarr(1:size(mfFVs(neighs(i1))%poiarr)-1)-ce%pc)*unit_u
+       sample_points(l+1:l+size(mfFVs(neighs(i1))%poiarr)-1)%vy=(mfFVs(neighs(i1))%poiarr(1:size(mfFVs(neighs(i1))%poiarr)-1)-ce%pc)*unit_v
+       sample_points(l+1:l+size(mfFVs(neighs(i1))%poiarr)-1)%vz=(mfFVs(neighs(i1))%poiarr(1:size(mfFVs(neighs(i1))%poiarr)-1)-ce%pc)*unit_w
+       l=l+size(mfFVs(neighs(i1))%poiarr)-1
+     end do
+    
+     ! Set system matrix A, b and solve system
+    
+     do i1=1,6
+       do j=1,6
+         mA(i1,j) = sum(bs(i1,sample_points)*bs(j,sample_points)*weights(sample_points))
+       end do
+       mb(i1,1)=sum(sample_points%vz*bs(i1,sample_points)*weights(sample_points))
+     end do 
+    
+     call gaussj(mA,mb)
+    
+     !evaluate curvature at point u=0, v=0
+     !ep=sum(sample_points(1:size(ce%poiarr)-1))/(size(ce%poiarr)-1d0) ! point where curvature is evaluated
+     ep%vx=(ce%plic%p0-ce%pc)*unit_u
+     ep%vy=(ce%plic%p0-ce%pc)*unit_v
+     ep%vz=(ce%plic%p0-ce%pc)*unit_w
+     ce%curvature = ((1d0 + dvfit(ep)**2)*duufit(ep) + (1d0 + dufit(ep)**2)*dvvfit(ep) - 2d0*dufit(ep)*dvfit(ep)*duvfit(ep))/sqrt((1d0 + dufit(ep)**2 + dvfit(ep)**2)**3)
+     ce%pqicnormal = (-1d0)*((-dufit(ep))*unit_u + (-dvfit(ep))*unit_v + unit_w)/(dufit(ep)**2 + dvfit(ep)**2 + 1d0)
+     ce%pqicnormal%vx = ce%pqicnormal * ii
+     ce%pqicnormal%vy = ce%pqicnormal * jj
+     ce%pqicnormal%vz = ce%pqicnormal * kk
+     ce%pqicnormal=unit(ce%pqicnormal)
+     deallocate(sample_points)
+     
+  else 
+     ce%curvature = 0d0
+  end if
+ 
+  contains ! definition of basis functions of fit(these must be linearly independant functions) and evaluation functions after the calculation of the coefs 
+ 
+  real(kind(0.d0)) elemental function weights(p) result(res)
+  type(vector), intent(in) :: p
+  real(kind(0.d0)) :: e
+  res=(3d0*ce%Vc/4d0/pi*exp(-norm(p)**3*ce%Vc))**2/norm2(p)
+  !res=1d0/(norm2(p))
+  !res=1d0
+  end function weights
+  
+  real(kind(0.d0)) elemental function bs(i,p) result(res)
+  integer, intent(in) :: i
+  type(vector), intent(in) :: p ! this must be a point of Cuvw
+  select case(i)
+  case(1) ! contant
+     res=1d0
+  case(2) ! first basis function
+     res=p%vx
+  case(3) ! second basis function
+     res=p%vy
+  case(4) ! ...
+     res=p%vx*p%vy
+  case(5)
+     res=p%vx**2
+  case(6)
+     res=p%vy**2
+  end select
+  end function bs 
+ 
+  real(kind(0.d0)) elemental function deru_bs(i,p) result(res)
+  integer, intent(in) :: i
+  type(vector), intent(in) :: p
+  select case(i)
+  case(1) ! derivative of contant
+     res=0d0
+  case(2) ! u-derivative of first basis function
+     res=1d0
+  case(3) ! u-derivative of second basis function
+     res=0d0
+  case(4) ! ...
+     res=p%vy
+  case(5)
+     res=2d0*p%vx
+  case(6)
+     res=0d0
+  end select
+  end function deru_bs
+ 
+  real(kind(0.d0)) elemental function derv_bs(i,p) result(res)
+  integer, intent(in) :: i
+  type(vector), intent(in) :: p
+  select case(i)
+  case(1) ! v-derivative of contant
+     res=0d0
+  case(2) ! v-derivative of first basis function
+     res=0d0
+  case(3) ! v-derivative second basis function
+     res=1d0
+  case(4) ! ...
+     res=p%vx
+  case(5)
+     res=0d0
+  case(6)
+     res=2d0*p%vy
+  end select
+  end function derv_bs
+ 
+  real(kind(0.d0)) elemental function deruu_bs(i,p) result(res)
+  integer, intent(in) :: i
+  type(vector), intent(in) :: p
+  select case(i)
+  case(1) ! uv-second derivative of contant
+     res=0d0
+  case(2) ! uv-second derivative of first basis function
+     res=0d0
+  case(3) ! uv-second derivative of second basis function
+     res=0d0
+  case(4) ! ...
+     res=0d0
+  case(5)
+     res=2d0
+  case(6)
+     res=0d0
+  end select
+  end function deruu_bs
+ 
+  real(kind(0.d0)) elemental function deruv_bs(i,p) result(res)
+  integer, intent(in) :: i
+  type(vector), intent(in) :: p
+  select case(i)
+  case(1) ! uv-second derivative of contant
+     res=0d0
+  case(2) ! uv-second derivative of first basis function
+     res=0d0
+  case(3) ! uv-second derivative of second basis function
+     res=0d0
+  case(4) ! ...
+     res=1d0
+  case(5)
+     res=0d0
+  case(6)
+     res=0d0
+  end select
+  end function deruv_bs
+ 
+  real(kind(0.d0)) elemental function dervv_bs(i,p) result(res)
+  integer, intent(in) :: i
+  type(vector), intent(in) :: p
+  select case(i)
+  case(1) ! uv-second derivative of contant
+     res=0d0
+  case(2) ! uv-second derivative of first basis function
+     res=0d0
+  case(3) ! uv-second derivative of second basis function
+     res=0d0
+  case(4) ! ...
+     res=0d0
+  case(5)
+     res=0d0
+  case(6)
+     res=2d0
+  end select
+  end function dervv_bs
+  
+  real(kind(0.d0)) elemental function fit(p) result(res)
+  type(vector), intent(in) :: p
+  integer :: i
+  res = 0d0
+  do i=1,6
+     res = res + bs(i,p)*mb(i,1)
+  end do
+  end function fit
+ 
+  real(kind(0.d0)) elemental function dufit(p) result(res)
+  type(vector), intent(in) :: p
+  integer :: i
+  res = 0d0
+  do i=1,6
+     res = res + deru_bs(i,p)*mb(i,1)
+  end do
+  end function dufit
+ 
+  real(kind(0.d0)) elemental function dvfit(p) result(res)
+  type(vector), intent(in) :: p
+  integer :: i
+  res = 0d0
+  do i=1,6
+     res = res + derv_bs(i,p)*mb(i,1)
+  end do
+  end function dvfit
+ 
+  real(kind(0.d0)) elemental function duufit(p) result(res)
+  type(vector), intent(in) :: p
+  integer :: i
+  res = 0d0
+  do i=1,6
+     res = res + deruu_bs(i,p)*mb(i,1)
+  end do
+  end function duufit
+  
+  real(kind(0.d0)) elemental function duvfit(p) result(res)
+  type(vector), intent(in) :: p
+  integer :: i
+  res = 0d0
+  do i=1,6
+     res = res + deruv_bs(i,p)*mb(i,1)
+  end do
+  end function duvfit
+ 
+  real(kind(0.d0)) elemental function dvvfit(p) result(res)
+  type(vector), intent(in) :: p
+  integer :: i
+  res = 0d0
+  do i=1,6
+     res = res + dervv_bs(i,p)*mb(i,1)
+  end do
+  end function dvvfit
+ 
+  end subroutine find_pqic_curvature
+ 

@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 5 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Interpolation corrections are based on ivar
+2. Gradient is used for the interpolation and the corrections
+3. PLIC is used
+4. Npasses is 0
+
+
+Observations:
+1. We tested the algorithm several times to find the number of plic passes in order to improve the gradient calculation.
+   We found that 5 plic passes are adequate, afterwards the algorithm convergences. After 10 plic passes the improvement 
+   is very small and no actual improvement is observed.
+2. The results show that this is the best algorithm, up to now, for improving the boundary patches. 
+

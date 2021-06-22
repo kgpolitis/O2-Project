@@ -1,0 +1,72 @@
+  ----- O2 Integer Message Set Details ----- 
+  - 
+  - Complete ? F
+  - 
+  - Related ranks: 
+  -           1           2           3
+  - 
+  ---        Send/Receive Info           --- 
+  - 
+  - Did I send to rank ?  
+  -            1           2           3
+  -  T F F
+  - Sending sizes: 
+  -           80           0           0
+  - Sending sizes in Mb: 
+  -   3.814687943304307E-005  0.000000000000000E+000  0.000000000000000E+000
+  - Data to be sent or already sent - Report 
+  - 
+  - msg::datasent           1
+  - To        :            1
+  - Data (Cnt):           80
+  - Data (MB ):   3.814687943304307E-005
+          80          -4         180          -4         280          -4
+         380          -4         480          -4         580          -4
+         680          -4         780          -4         880          -4
+         980          -4        1080          -4        1180          -4
+        1280          -4        1380          -4        1480          -4
+        1580          -4        1680          -4        1780          -4
+        1880          -4        1980          -4          84          -4
+         184          -4         284          -4         384          -4
+         484          -4         584          -4         684          -4
+         784          -4         884          -4         984          -4
+        1084          -4        1184          -4        1284          -4
+        1384          -4        1484          -4        1584          -4
+        1684          -4        1784          -4        1884          -4
+        1984          -4
+  - msg::datasentend           1
+  - msg::datasend::null           2
+  - msg::datasend::null           3
+  - 
+  - Did I receive by rank ? 
+  -            1           2           3
+  -  T F F
+  - Received sizes: 
+  -           80           0           0
+  - Received sizes in Mb: 
+  -   3.814687943304307E-005  0.000000000000000E+000  0.000000000000000E+000
+  - Data received - Report 
+  - 
+  - msg::datarecv           1
+  - To        :            1
+  - Data (Cnt):           80
+  - Data (MB ):   3.814687943304307E-005
+        2071          -4        2171          -4        2271          -4
+        2371          -4        2471          -4        2571          -4
+        2671          -4        2771          -4        2871          -4
+        2971          -4        3071          -4        3171          -4
+        3271          -4        3371          -4        3471          -4
+        3571          -4        3671          -4        3771          -4
+        3871          -4        3971          -4        2067          -4
+        2167          -4        2267          -4        2367          -4
+        2467          -4        2567          -4        2667          -4
+        2767          -4        2867          -4        2967          -4
+        3067          -4        3167          -4        3267          -4
+        3367          -4        3467          -4        3567          -4
+        3667          -4        3767          -4        3867          -4
+        3967          -4
+  - msg::datarecvend           1
+  - msg::datarecv::null           2
+  - msg::datarecv::null           3
+  - 
+  - Report::Completed 

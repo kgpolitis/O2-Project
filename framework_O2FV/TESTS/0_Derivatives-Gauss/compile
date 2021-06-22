@@ -1,0 +1,19 @@
+# ifort -check all ders_gauss.f90 -I../../../Dlib_lucid/incs \
+# -L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva \
+# -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+# -o gauss_derivatives.out
+
+# ifort -check all ders_gauss_deformed.f90 -I../../../Dlib_lucid/incs \
+# -L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva \
+# -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+# -o gauss_derivatives_deformed.out
+
+ ifort -check all ders_gauss.f90 -I../../../Dlib/incs \
+ -L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods\
+ -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+ -o gauss_derivatives.out
+
+# ifort ders_gauss_deformed.f90 -I../../../Dlib_lucid/incs \
+# -L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods\
+# -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+# -o gauss_derivatives_deformed.out

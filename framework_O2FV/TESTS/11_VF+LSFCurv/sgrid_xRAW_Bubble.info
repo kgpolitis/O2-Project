@@ -1,0 +1,36 @@
+  ---- Surface Grid Generation by RAW capturing data : debug file 
+  ---- Interface's Name is : Bubble
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=         2384
+    > max hash=         5114
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =         102
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > NONE FOUND 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =         228
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =         128
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats
+  - Nodes  :          102
+  - Edges  :          228
+  - Bedges :            0
+  - Nvar   :            0
+  - Cells  :          128
+  - Euler X:            2

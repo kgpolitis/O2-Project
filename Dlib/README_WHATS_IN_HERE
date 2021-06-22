@@ -1,0 +1,11 @@
+Here we store the: 
+
+1.
+-> The .so libraries generated from compilation
+2.
+-> The archive if they are generated : in archives
+3.
+-> The parts for creating the .so files : in parts
+4.
+-> The generated headers
+

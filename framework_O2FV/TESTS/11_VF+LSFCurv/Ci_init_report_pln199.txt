@@ -1,0 +1,46 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+  -> Working Parameters 
+      almost_at          =  1.000000000000000E-012
+      a_scale            =   1.00000000000000     
+      No iso faces found 
+      Bounding boxes not found 
+  
+ ------------------------ Nodes Count ----------------------  
+  
+ ---> in  nodes =        34385
+ ---> out nodes =        34385
+ ---> at  nodes =          151
+  
+ ---> sum of nodes check :: ok
+  
+  
+ ------------------------ Faces Count ----------------------  
+  
+ ---> in  faces =        94943
+ ---> out faces =        94943
+ ---> at  faces =         6914
+ ---> iso faces =            0
+ ---> bad faces =            0
+  
+ ---> sum of faces check :: ok
+  
+  
+ ------------------------- FVs Count -----------------------  
+  
+ ---> in  FVs =        30264
+ ---> out FVs =        30264
+ ---> at  FVs =         3472
+  
+ ---> sum of FVs check :: ok
+  
+  
+ ----------------------- Trimmed Ci -----------------------  
+  None 
+ ----------------------- Ci looks good ---------------------  
+  
+  ---> Faces with more than two section points: 
+   None 

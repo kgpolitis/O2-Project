@@ -1,0 +1,10 @@
+ifort -check all test_neighs.f90 -o neighs.out \
+ -I../../../Dlib/incs \
+ -L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods\
+ -L/home/g/mpich/current-v/lib -lmpich
+
+ifort -check all test_neighs1.f90 -o neighs1.out \
+ -I../../../Dlib/incs \
+ -L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods\
+ -L/home/g/mpich/current-v/lib -lmpich
+

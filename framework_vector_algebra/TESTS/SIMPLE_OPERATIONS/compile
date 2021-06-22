@@ -1,0 +1,2 @@
+ifort -check all test4.f90 -I../../../Dlib/incs \
+-L../../../Dlib/archives -lfva

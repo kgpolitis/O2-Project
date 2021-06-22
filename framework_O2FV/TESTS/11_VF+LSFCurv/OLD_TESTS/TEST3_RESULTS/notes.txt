@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 3 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Interpolation corrections are based on ivar
+2. Gradient is used for the interpolation and the corrections
+3. PLIC is not used, ivar Ci values are derived by the subsequent isosurfaces generated
+4. Npasses is 2, after that the algorithm diverges
+5. The interpolation is repeated after each pass 
+
+
+Observations:
+1. First we checked the number of passes required to obtain better results. we found that npasses=2 is
+   adequate. After that the result diverge. Note that the max error at the RE_Dist file becomes a bit higher
+   at npass=2 but at the same time we L1 becomes a bit better. So we compromised to npasses=2
+2. The curvature scales correctly, but unfortunately this means that it becomes higher and higher.
+3. The problem with this approach is that we repeat the interpolation, so it is more time consuming. Comparing
+   with the previous approaches, test1 and test2, the results are only a bit better but not better enough. So 
+   repeating the interpolation seems to be a waste of time.
+
+

@@ -1,0 +1,45 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+  -> Working Parameters 
+      almost_at          =  1.000000000000000E-012
+      a_scale            =   1.00000000000000     
+      Using iso faces 
+  
+ ------------------------ Nodes Count ----------------------  
+  
+ ---> in  nodes =         6615
+ ---> out nodes =         2205
+ ---> at  nodes =          441
+  
+ ---> sum of nodes check :: ok
+  
+  
+ ------------------------ Faces Count ----------------------  
+  
+ ---> in  faces =        18600
+ ---> out faces =         6200
+ ---> at  faces =            0
+ ---> iso faces =          400
+ ---> bad faces =         1680
+  
+ ---> sum of faces check :: ok
+  
+  
+ ------------------------- FVs Count -----------------------  
+  
+ ---> in  FVs =         6000
+ ---> out FVs =         2000
+ ---> at  FVs =            0
+  
+ ---> sum of FVs check :: ok
+  
+  
+ ----------------------- Trimmed Ci -----------------------  
+  None 
+ ----------------------- Ci looks good ---------------------  
+  
+  ---> Faces with more than two section points: 
+   None 

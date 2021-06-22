@@ -1,0 +1,2 @@
+
+Switch to the Dlib_opts directory and run ./make_lib

@@ -1,0 +1,6 @@
+ %--------- General info for cells with Ci<0 ----------
+ %--------- Problem at Cell ----------
+ %----- Ci =  -2.443161509660784E-018
+ %----- Cell id =        9973
+ %----- at = T
+ %

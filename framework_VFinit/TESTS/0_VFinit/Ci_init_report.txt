@@ -1,0 +1,352 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+ ------------------------ Nodes Count ----------------------  
+  
+ ---> in  nodes =         4620
+ ---> out nodes =         4620
+ ---> at  nodes =           21
+  
+ ---> sum of nodes check :: ok
+  
+  NOTE:: Working with at-margin =   1.000000000000000E-014
+      :: this means that a node is at if :
+                 abs(F(node%point)) < almost_at 
+  
+  
+ ------------------------ Faces Count ----------------------  
+  
+ ---> in  faces =        10244
+ ---> out faces =        10244
+ ---> at  faces =         4712
+  
+ ---> sum of faces check :: ok
+  
+  ---> Faces with more than two section points: 
+   Face         2404  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2411  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2418  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2423  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2430  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2437  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2442  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2449  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2456  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2461  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2468  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2475  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2487  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2494  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2506  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2513  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2520  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2525  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2532  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2539  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2544  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2551  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2558  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2563  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2570  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2577  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2582  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2589  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2596  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2601  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2608  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2615  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2627  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2634  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2646  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2653  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2665  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2672  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2684  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2691  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2703  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2710  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2722  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2729  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2741  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2748  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2767  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2786  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2804  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2823  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2842  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         2861  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5540  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5559  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5578  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5597  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5615  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5634  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5653  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5660  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5672  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5679  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5691  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5698  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5710  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5717  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5729  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5736  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5748  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5755  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5767  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5774  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5786  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5793  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5800  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5805  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5812  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5819  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5824  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5831  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5838  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5843  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5850  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5857  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5862  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5869  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5876  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5881  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5888  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5895  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5907  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5914  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5926  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5933  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5940  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5945  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5952  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5959  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5964  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5971  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5978  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5983  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5990  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+   Face         5997  with            2 isoedges
+  Isoedge            3 interface points
+  Isoedge            3 interface points
+  
+ ------------------------- FVs Count -----------------------  
+  
+ ---> in  FVs =         2876
+ ---> out FVs =         2876
+ ---> at  FVs =         2248
+  
+ ---> sum of FVs check :: ok
+  
+  
+ ------------------------  Trimmed Ci -----------------------  
+  None 
+ ----------------------- Ci looks good ---------------------  

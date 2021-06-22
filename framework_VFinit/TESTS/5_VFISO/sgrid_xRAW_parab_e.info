@@ -1,0 +1,41 @@
+  ---- Surface Grid Generation by RAW capturing data : debug file 
+  ---- Interface's Name is : parab_e
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=           18
+    > max hash=         7477
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =        1299
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > Hashing for face captured nodes 
+    > Hashing for face captured nodes : DONE 
+    |-> NEW  Surface grid nodes no =        1379
+    |-> Grid extension size is     =          80
+    > Extension to surface grid nodes added 
+    > Adding face captured nodes : DONE 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =        2604
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =        1226
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats
+  - Nodes  :         1379
+  - Edges  :         2604
+  - Bedges :          142
+  - Nvar   :         1368
+  - Cells  :         1226
+  - Euler X:            1

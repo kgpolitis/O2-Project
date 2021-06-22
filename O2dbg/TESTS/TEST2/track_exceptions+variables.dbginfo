@@ -1,0 +1,26 @@
+  
+ --------------------------------------- 
+      Debug Markers Report 
+  
+   Number of markers =           4
+  After init
+    Marker ID (top -> bot) :           1
+    Marker ID (bot -> top) :           4
+      NAN  >  F
+      a/0  >  F
+  After NAN calculation
+    Marker ID (top -> bot) :           2
+    Marker ID (bot -> top) :           3
+      NAN  >  T
+      a/0  >  F
+   Single Precision Scalar Check 
+    Marker ID (top -> bot) :           3
+    Marker ID (bot -> top) :           2
+      NAN  >  T
+      a/0  >  T
+   Single Precision Scalar Check 
+    Marker ID (top -> bot) :           4
+    Marker ID (bot -> top) :           1
+      NAN  >  F
+      a/0  >  T
+ --------------------------------------- 

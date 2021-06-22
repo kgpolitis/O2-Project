@@ -1,0 +1,10 @@
+
+ifort -O3 NC_test_CDS.f90 -I../../../Dlib/incs \
+-L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+-o isonormals.out
+
+ifort -check all NC_test_LSSurf.f90 -I../../../Dlib/incs \
+-L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+-o isonormals_geo.out

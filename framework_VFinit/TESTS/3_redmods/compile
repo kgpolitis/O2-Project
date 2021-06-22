@@ -1,0 +1,15 @@
+# clean
+rm -f *.a *.mod *.o
+# compile modules
+ifort -c -fpic -check all FRMWORK_SPACE3D.f90
+ifort -c -fpic -check all DHOLDER_IMPDEFS.f90
+ifort -c -fpic -check all FRMWORK_SETMFLUID.f90
+# store in lib
+ar -cru libfva.a FRMWORK_SPACE3D.o DHOLDER_IMPDEFS.o
+ar -cru libvfinit.a FRMWORK_SETMFLUID.o
+# clean
+rm -f FRMWORK_SPACE3D.o DHOLDER_IMPDEFS.o FRMWORK_SETMFLUID.o
+# compile other module
+ifort -c -fpic new.f90 
+# compile program
+ifort testp.f90 new.o -L./ -lvfinit -lfva

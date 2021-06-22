@@ -1,0 +1,98 @@
+# !/bin/sh
+# 
+# RUN locally in a FINE/Marine Project, where the .iec file is 
+# located
+# 
+# options :
+# 
+#    -o : only a specific computation 
+#         e.g. -o 2 : only the second computation in the FINE/Marine project 
+# 
+
+filepath=`pwd`
+
+filename=`basename $filepath`
+
+echo ' Fine/Marine Project -> Input ISISCFD Backup '
+echo
+echo ' Packing directory : ' $filepath 
+echo '                to : ' $filename.tar.gz   
+echo ' Working...'
+
+tar_log='tar_'$filename'.txt'
+
+echo "================================== Finepack Tar Log" > $tar_log 
+echo "    Packing log for finemarine files $filename" >> $tar_log
+echo " " >> $tar_log
+echo "    created : " `date` >> $tar_log
+echo " " >> $tar_log
+echo "    by packing : $filepath " >> $tar_log
+echo "            to : $filename.tar.gz " >> $tar_log
+echo "===================================================" >> $tar_log
+
+while getopts "o:" opt;do
+ 
+ case $opt in
+   
+  o) 
+    
+    i_target=$OPTARG
+    
+ esac
+ 
+done
+
+comp2tar=$filename'_comp_'
+
+dirlist=(`ls -d $filename*/`)
+
+dirlist=(${dirlist[@]//'/'/})
+
+for ((i=0;i<=${#dirlist[@]}-1;i++));do
+ 
+ dlist_ext=( `ls -d ${dirlist[$i]}/b*`  ) 
+ 
+ let " ip=i+1 "
+ 
+ mkdir  $comp2tar$ip 
+ 
+ echo " ${#dlist_ext[@]} blocks --> $comp2tar$ip "
+ for ((j=0;j<=${#dlist_ext[@]}-1;j++));do
+    
+    #echo " `basename ${dlist_ext[$j]}` --> $comp2tar$ip"
+    mkdir $comp2tar$ip/`basename ${dlist_ext[$j]}`
+    cp ${dlist_ext[$j]}/*'_original'* $comp2tar$ip/`basename ${dlist_ext[$j]}`
+    
+ done
+ 
+ cp ${dirlist[$i]}/input.isismb $comp2tar$ip
+ cp ${dirlist[$i]}/${dirlist[$i]}.bcs $comp2tar$ip
+ cp ${dirlist[$i]}/${dirlist[$i]}.sim $comp2tar$ip
+ #cp ${dirlist[$i]}/isiscfdmpi $comp2tar$ip
+ 
+done
+
+if [ -z $i_target ]; then 
+
+dirlist=(`ls -d $comp2tar*/`)
+
+dirlist=(${dirlist[@]//'/'/})
+
+echo ' all computations --> tar'
+
+else
+
+dirlist=( $comp2tar$i_target )
+
+echo ' computation '$i_target' --> tar '
+
+filename=$filename'_comp_'$i_target
+
+fi
+
+tar -zcvf $filename.tar.gz ${dirlist[@]} >> $tar_log
+
+rm -rf $comp2tar*/
+
+echo " Done "
+echo

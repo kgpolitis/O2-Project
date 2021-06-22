@@ -1,0 +1,27 @@
+ifort -check all test_neighs.f90 -o neighs_JADE.out \
+ -I../../../Dlib_JADE_lucid/incs \
+ -L../../../Dlib_JADE_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+ -I/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -L/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -lmpi
+
+ifort -check all test_neighs1.f90 -o neighs1_JADE.out \
+ -I../../../Dlib_JADE_lucid/incs \
+ -L../../../Dlib_JADE_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+ -I/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -L/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -lmpi
+
+ifort -check all test_neighs2.f90 -o neighs2_JADE.out \
+ -I../../../Dlib_JADE_lucid/incs \
+ -L../../../Dlib_JADE_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+ -I/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -L/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -lmpi
+ 
+ifort -check all test_neighs3.f90 -o neighs3_JADE.out \
+ -I../../../Dlib_JADE_lucid/incs \
+ -L../../../Dlib_JADE_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+ -I/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -L/home/g/Programming_PhD/Release_Etudiant/2.3-0/mpi-clusters/SGI-MPI/current-v \
+ -lmpi

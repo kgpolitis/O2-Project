@@ -1,0 +1,67 @@
+# !/bin/sh
+incldir=$ISIS_HOME/fPW/Include/$ISIS_ARCH
+
+echo " "
+echo " > Checking ISIS include directory : "
+echo " > " $incldir 
+echo " > for specific .mod files and removing them "
+
+cd $incldir
+
+echo " "
+echo " --<o> FRMWORK_* files "
+rm -v FRMWORK_*.mod
+
+echo " "
+echo " --<o> frmwork_* files "
+rm -v frmwork_*.mod
+
+echo " "
+echo " --<o> DHOLDER_* files "
+rm -v DHOLDER_*.mod
+
+echo " "
+echo " --<o> dholder_* files "
+rm -v dholder_*.mod
+
+echo " "
+echo " --<o> FHOLDER_* files "
+rm -v FHOLDER_*.mod
+
+echo " "
+echo " --<o> fholder_* files "
+rm -v fholder_*.mod
+
+echo " "
+echo " --<o> UTILMOD_* files "
+rm -v UTILMOD_*.mod
+
+echo " "
+echo " --<o> utilmod_* files "
+rm -v utilmod_*.mod
+
+echo " "
+echo " --<o> EXTENDS_* files "
+rm -v EXTENDS_*.mod
+
+echo " "
+echo " --<o> extends_* files "
+rm -v extends_*.mod
+
+echo " "
+echo " --<o> mpio2 files "
+rm -v mpio2.mod
+
+echo " "
+echo " --<o> MPIO2 files "
+rm -v MPIO2.mod
+
+echo " "
+echo " --<o> mpio2 files "
+rm -v masters_*.mod
+
+echo " "
+echo " --<o> MPIO2 files "
+rm -v MASTERS_*.mod
+
+echo " "

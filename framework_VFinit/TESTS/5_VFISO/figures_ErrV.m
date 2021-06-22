@@ -1,0 +1,6 @@
+s=fitoptions('Method','NonlinearLeastSquares','StartPoint',[1 1])
+f = fittype('a*x^k','options',s)
+[ErrV_fun,gof2] = fit(n,ErrV,f,s)
+[ErrS_fun,gof2] = fit(n,ErrS,f,s)
+[ErrV1_fun,gof2] = fit(n,ErrV1,f,s)
+[nf,gof2]=fit(n,nin,f,s)

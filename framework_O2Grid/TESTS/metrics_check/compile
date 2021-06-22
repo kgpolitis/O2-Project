@@ -1,0 +1,5 @@
+ ifort -traceback metrics_check.f90 -I../../../Dlib/incs \
+ -L../../../Dlib/archives -lO2Grid -lO2mpi -lfva -lgenmods \
+ -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+ -o metrics_check.out
+

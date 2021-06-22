@@ -1,0 +1,36 @@
+  ---- Surface Grid Generation by RAW capturing data : debug file 
+  ---- Interface's Name is : plane1_gmsh
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=           14
+    > max hash=         2360
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =         707
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > NONE FOUND 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =        1718
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =        1012
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats
+  - Nodes  :          707
+  - Edges  :         1718
+  - Bedges :          114
+  - Nvar   :         1126
+  - Cells  :         1012
+  - Euler X:            1

@@ -1,0 +1,37 @@
+# !/bin/sh
+
+LIBLOC=$ISIS_HOME/fPW/O2-project/Dlib_opts
+
+cd $LIBLOC
+  
+echo
+
+if [ "$1" = "JADE" ];then
+  
+  echo ' Setting opts to common for JADE ' 
+  
+  ln -sf compilers/ifort_opts_JADE.inc comp_opts.inc
+  ln -sf mpi/mpiSGI.inc mpi_opts.inc
+  
+elif [ "$1" = 'ADA' ];then
+
+  echo ' Setting opts to common for ADA '
+  
+  ln -sf compilers/ifort_opts_ADA.inc comp_opts.inc
+  ln -sf mpi/mpiSGI_ADA.inc mpi_opts.inc
+
+elif [ "$1" = 'dbg' ];then
+  
+  echo ' Setting opts to debugging '
+  ln -sf compilers/ifort_opts_debug.inc comp_opts.inc
+  
+else
+  
+  echo ' Setting opts to common for I7 '
+  
+  ln -sf compilers/ifort_opts_I7_loc.inc comp_opts.inc
+  ln -sf mpi/mpichRE_opts.inc mpi_opts.inc
+  
+fi
+
+echo 

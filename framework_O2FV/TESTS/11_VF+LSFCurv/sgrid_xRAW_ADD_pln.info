@@ -1,0 +1,36 @@
+  ---- Surface Grid Generation by ADDING RAW capturing data : debug file 
+  ---- Interface's Name is : pln
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=         6175
+    > max hash=         7056
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =         441
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > NONE FOUND 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =         840
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =         400
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats after additions
+  - Nodes  :          543
+  - Edges  :         1068
+  - Bedges :           80
+  - Nvar   :          608
+  - Cells  :          528
+  - Euler X:            3

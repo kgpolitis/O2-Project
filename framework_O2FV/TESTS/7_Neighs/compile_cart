@@ -1,0 +1,4 @@
+ifort -check all test_neighs_cart.f90 -o neighs_cart.out \
+ -I../../../Dlib/incs \
+ -L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods\
+ -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich

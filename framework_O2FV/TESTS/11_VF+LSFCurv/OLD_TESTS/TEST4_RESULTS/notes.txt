@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 4 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Interpolation corrections are based on faces
+2. Gradient is used for the interpolation and the corrections
+3. PLIC is not used, ivar Ci values are derived by the subsequent isosurfaces generated
+4. Npasses is 5, after that the algorithm diverges but veeeery slowly
+5. The interpolation corrections are based on the faces
+6. THe interpolation is repeated after each pass
+
+
+Observations:
+1. We begun with interpolation corrections that didn't introduce the gradient to the the corrections
+   however it seems that nothing can be improved with this approach so we changed the scheme to using
+   the gradient for the corrections.
+2. After many checks we found that the npass is 5 is a nice compromise between speed and accuracy
+3. Note that for this type of corrections the curvature behaves a bit better, but nothing astonishing. Probably this 
+   is also too slow to really help.
+

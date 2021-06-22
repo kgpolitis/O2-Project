@@ -1,0 +1,85 @@
+----- LINE 1 in RE files is header -------
+add_grad = .false. ; add_correction_grad = .false.; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .true.  ; add_correction_grad = .false.; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=2
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=3
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=2
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=3
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=3 !***
+add_grad = .false. ; add_correction_grad = .false.; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .true.  ; add_correction_grad = .false.; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=2
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=3
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=1
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=2
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.false.; use_plic=.true.; grad_type=3
+add_grad = .false. ; add_correction_grad = .false.; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=1
+add_grad = .true.  ; add_correction_grad = .false.; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=1
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=1
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=2
+add_grad = .false. ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=3
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=1
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=2
+add_grad = .true.  ; add_correction_grad = .true. ; interp_pass = .false. ; at_faces=.true. ; use_plic=.true.; grad_type=3
+
+
+Above are the option lines for the Code, change them to obtain the result obtained in the same line of the RE file
+
+Cases at lines 2-10  refer to plic_ciivar subroutine
+Cases at lines 11-18 refer to plic_cif    subroutine
+Cases at lines 19-20 refer to plic_cif    subroutine with interpolations at faces
+
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 8 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Same N but different correction schemes 
+2. In the previous cases we checked the standard cases to obtain a view of how each schemes
+   behaves. Here we sum up a collective approach.
+3. In this case we also check the times required for the scheme to finish and we have a bit
+   refined the corrections with the gradient to check several variations of the schemes 
+
+   
+Observations:
+1.  Adding the gradient for the interpolations schemes makes the interface a bit more wavy and the curvature becomes a bit worse, however
+    the max Ci errors at the boundary become smaller. 
+2.  Adding the gradient for the interpolation correction makes the interface errors increase. The best case is obtained with the
+    boundary values for the Ci obtained by extrapolating the ivar values, ie line 6 where the results are similar to case 1, with an
+    improvement to the boundary.
+3.  After line 6 we repeat in the same with the gradient added everywhere(for both interpolation and corrections)-> Note that if the
+    gradient is not added to the interpolation scheme then add_grad = .false. and affects the interpolation schemes of the 
+4.  Again the extrapolated gradient case seems to give the best results. The results also seem to provide the best curvature and moreover
+    almost the same distance errors to the analytical interface. So it seems that 9 gives the best results.
+5.  *** For 10 we manually disabled from the interpolation scheme of the corrections the gradients to check (this is why it has the three
+    stars. The results did not improve, but became worst from any of their aspects. This means that the gradient helps improve our results
+    but only when properly used.
+6.  After we repeat for the plic_cif subroutine and repeat again for the interpolation corrections based at the faces.
+7. Comparison of best results:
+
+    A. Based on the Ci errors:
+       -> Min to larger vals of Ci_err_max: [NOTE: Ci_err_max is always found at the boundary as expected !!!]
+          20 14 6  9  10 17 18   for   2.183900022162011E-002 up to 3.966089970099251E-002
+       -> Min to larger vals of Ci_err_L1:
+          17 9  14 25 2  6  3    for   1.624151026393647E-004, -4.104230962381093E-004, ... up to -1.846273969704084E-003
+       -> Min to larger vals of Ci_bnd_L1:
+          17 9  14 2  25 6  3    for  -6.315322143559999E-004, -1.920529505828380E-003, ... up to -9.096708520845508E-003
+         
+    B. Based on the Dist errors:
+       -> Min to larger vals of Dist_err_max
+          9  17 14 25 6  2  3       for   1.216639558478982E-002, ... up to 1.607031794846248E-002
+       -> Min to larger vals of Dist_err_L1
+          14 2  6  9  17 25 3       for   1.252245314015771E-003, ... up to 1.666709468773169E-003
+    
+    Winners up to now : 17/9/14
+    
+    C. Based on Curvature errors:
+       -> Min to larger vals of Curv_err_max
+          10 9  7  20 2  12 18      for   1.39674074411327, ... up to 2.68184138124407
+       -> Min to larget vals of Curv_err_L1
+          2  9  10 7  17 25 6       for   0.15 ... up to 0.25 
+          
+    Winner if curvature is taken into consideration : 9

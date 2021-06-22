@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------
+Notes and Observations about TEST CASE 11: Using the boundary corrections 
+-------------------------------------------------------------------------
+
+Case description:
+ 0. As test case 9 but with corrected normals
+ 1. Planar interface are reconstructed systematically
+ 2. Each interface differs from the next by changing the normal unit vector of the plane
+ 3. The point defining the plane remains the same
+ 4. For the definition of the normal vector the following points are used ( l=grid length scale )
+    > Point C=(0,-l/2,l/2)
+    > Point A=(0,-1d0+l/2,hs ), hs is an array of lengths, an interface is defined for each hs
+    and the unit vector ii
+    > After a certain amount of iterations, when hs exceeds 1d0, point A becomes A=(0,-hs_in_inverse,1d0-l/2)
+    and the procedure repeats
+    > In this case we did 95 iteration till we reached 1d0 and afterwards 95 more
+    The effect of the above choises is:
+    
+                       ____________________________________________________
+                      |            \         |                             |  Interfaces for hs(1), h(i) and hs(last)
+                      |             \      (last)                          |  are shown
+                      |             (i)      |                             |
+                      |               \      |                             |
+                      |                \     |                             |
+                      |                 \    |                             |
+                      |                  \   |                             |
+                      |                   \  |                             |
+                      |                    \ |                             |
+                      |                     \|                             |
+                      |-----(1)--------------C-----------------------------|
+                      |                      |\                            |
+                      |                      | \                           |
+                      |                      |  \                          |
+                      |                      |   \                         |
+                      |                      |    \                        |
+                      |                      |     \                       |
+                      |                      |      \                      |
+                      |                      |       \                     |
+                      |                      |        \                    |
+                      |                      |         \                   |
+                      |____________________________________________________|
+    
+    
+ 5. For the boundary corrections method 9 is used!
+ 
+ 
+Matlab Notes:
+  % cell divided into:
+  sub_cell=10
+  % the procedure is repeated 
+  reps=sub_cell*9+sub_cell/2
+  % define hs
+  l=0.1/sub_cell
+  hs=linspace(0,(reps-1)*l,reps)
+  % define interface angles 
+  phi=180*[atan2(hs,1-sub_cell*l/2) atan2(1-sub_cell*l/2,hs(end:-1:1))]/pi
+  
+ 
+Observations:
+ 1. The result are expected and well symmetric. At 45 degs we get an almost zero error: add it manually
+ 2. The maximum distance error to grid length scale is about 0.185. A safe value is 0.2

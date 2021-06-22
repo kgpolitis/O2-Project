@@ -1,0 +1,29 @@
+ifort -check all vfcurv_plane.f90 -I../../../Dlib_lucid/incs \
+-L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+-o vfcurv_plane.out
+
+#ifort -check all -traceback vfcurv_sphere.f90 -I../../../Dlib_lucid/incs \
+#-L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+#-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+#-o vfcurv_sphere.out
+
+#ifort vfcurv_mulit_plane.f90 -I../../../Dlib_lucid/incs \
+#-L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+#-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+#-o vfcurv_mulit_plane.out
+
+#ifort -O3 vfcurv_mulit_sphere.f90 -I../../../Dlib_lucid/incs \
+#-L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+#-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+#-o vfcurv_mulit_sphere.out
+
+ifort -check all -traceback vfcurv_mulit_sphere_simple.f90 -I../../../Dlib_lucid/incs \
+-L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+-o vfcurv_mulit_sphere_simple.out
+
+#ifort -O3 vfcurv_mulit_wave_simple.f90 -I../../../Dlib_lucid/incs \
+#-L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+#-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+#-o vfcurv_mulit_wave_simple.out

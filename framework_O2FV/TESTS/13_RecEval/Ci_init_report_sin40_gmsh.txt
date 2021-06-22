@@ -1,0 +1,65 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+  -> Working Parameters 
+      almost_at          =  1.000000000000000E-012
+      a_scale            =   1.00000000000000     
+      a_small            =  0.000000000000000E+000
+      margin_plus_limit  =  0.000000000000000E+000
+      margin_minus_limit =  0.000000000000000E+000
+      at 2 out lim displ =  0.000000000000000E+000
+      at 2 in  lim displ =  0.000000000000000E+000
+      Bounding boxes not found 
+  
+ ------------------------ Nodes Count ----------------------  
+  
+ ---> in  nodes =         1185
+ ---> out nodes =         1189
+ ---> at  nodes =            0
+  
+ ---> sum of nodes check :: ok
+  
+  
+ ------------------------ Faces Count ----------------------  
+  
+ ---> in  faces =         9792
+ ---> out faces =         9869
+ ---> at  faces =         1685
+ ---> iso faces =            0
+ ---> bad faces =            0
+  
+ ---> sum of faces check :: ok
+  
+  
+ ------------------------- FVs Count -----------------------  
+  
+ ---> in  FVs =         4506
+ ---> out FVs =         4545
+ ---> at  FVs =          980
+  
+ ---> sum of FVs check :: ok
+  
+  
+ ----------------------- Trimmed Ci -----------------------  
+  None 
+ -------------------------  Wrong Ci -----------------------  
+  
+ -   Problems with ->           1 cells , Ci<0
+ -   with : max(abs(Ci_lt_0)=  2.443161509660784E-018
+ -
+ -   Problems with ->           1 cells , Ci>1
+ -   with : max(abs(Ci_gt_1-1)=  2.886579864025407E-015
+  
+  
+  ---> Faces with more than two section points: 
+   None 
+ -   Created files for debugging:
+ ----- a general information file:         Ci_lt_zerosin40_gmsh.txt   
+ ----- a matlab file for visualizing interface approximations               
+ ----- and the relevant cells:             Ci_lt_zerosin40_gmsh.m        
+ -   Created files for debugging:
+ ----- a general information file:         Ci_gt_onesin40_gmsh.txt      
+ ----- a matlab file for visualizing interface approximations               
+ ----- and the relevant cells:             Ci_gt_onesin40_gmsh.m      

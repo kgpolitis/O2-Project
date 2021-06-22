@@ -1,0 +1,76 @@
+#!/bin/bash
+if [[ -n $ISIS_HOME ]];then 
+LIBLOC=$ISIS_HOME/fPW/O2-project
+else
+LIBLOC=~/O2-project
+fi
+
+myschroot=`which schroot`
+
+if [[ -n  $SCHROOT_CHROOT_NAME ]]; then
+    
+    availroots=`schroot -l`
+    
+    availroots=(${availroots[@]//'chroot:'/})
+    
+    for roots in ${availroots[@]}; do
+      if [[ $ISIS_ARCH == *$roots* ]]; then
+        echo " Compiling for a different platform "
+      fi
+    done
+    
+else
+   
+    echo " Compiling locally "
+   
+fi
+  
+$LIBLOC/tools/clean_mods
+
+DLIBNAMES[1]=generic_modules
+DLIBNAMES[2]=framework_vector_algebra
+DLIBNAMES[3]=O2mpi
+DLIBNAMES[4]=framework_O2Grid
+DLIBNAMES[5]=framework_VFinit
+DLIBNAMES[6]=framework_O2FV
+DLIBNAMES[7]=framework_O2FVmpi
+DLIBNAMES[7]=framework_inits
+DLIBNAMES[8]=options_normal_curv
+
+for libno in ${!DLIBNAMES[*]}; do
+    
+    cd $LIBLOC/${DLIBNAMES[$libno]}
+    
+    make $1
+    
+    if [ $? -eq 0 ]; then
+      DLIBNAMES[$libno]=${DLIBNAMES[$libno]}'-._.-._DONE'
+    else
+      DLIBNAMES[$libno]=${DLIBNAMES[$libno]}'-._.-._FAIL'
+    fi
+    
+done
+
+echo ' '
+echo ' ============================== Completion Story '
+echo 
+if [[ -z $1 ]];then
+echo "   Library type : $1 "
+else
+echo "   Library type : Default/Dynamic "
+fi
+echo "   ISIS ARCH is : $ISIS_ARCH "
+if [[ -z $SCHROOT_CHROOT_NAME ]]; then
+echo "   Compiled for : default"
+else
+echo "   Compiled for : $SCHROOT_NAME"
+fi
+echo "   Options : " 
+echo " " `ls -la $LIBLOC/Dlib_opts/comp_opts.inc`
+echo " " `ls -la $LIBLOC/Dlib_opts/mpi_opts.inc`
+echo
+for lib in ${DLIBNAMES[*]}; do
+echo " " $lib
+done
+echo ' '
+echo ' =============================================== '

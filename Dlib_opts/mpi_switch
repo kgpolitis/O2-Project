@@ -1,0 +1,30 @@
+# !/bin/sh
+
+LIBLOC=$ISIS_HOME/fPW/O2-project/Dlib_opts
+
+cd $LIBLOC
+  
+echo
+
+if [ "$1" = "MPICH" ];then
+  
+  echo ' Setting mpi opts to MPICH ' 
+  
+  ln -sf mpi/mpich3_opts.inc mpi_opts.inc
+  
+elif [ "$1" = 'OPENMPI' ];then
+
+  echo ' Setting mpi opts to OPENMPI '
+  
+  ln -sf mpi/openmpi2_opts.inc mpi_opts.inc
+  
+else
+  
+  echo ' Available options for mpi libs '
+  
+  echo '   MPICH    --> mpich current version '
+  echo '   OPENMPI  --> ompi  current version '
+  
+fi
+
+echo 

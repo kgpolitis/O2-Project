@@ -1,0 +1,88 @@
+  
+  Finding Neighborhoods 
+  Initializing Basic Data
+  Mode is:            0
+  Using Tags 
+  Using n1 Tags 
+  Using level per cell 
+  - Started Setting up n1 neighs 
+  - First time initializing n1 neighs 
+  - Skipped Setting up n1 neighs with lasso, size(cells)=0, nothing tagged 
+  - Finished Setting up n1 neighs with lasso 
+  
+  ----------------------------
+  Ranks :           4
+  Cells :      128000      128000      128000      128000
+  Wonolb:           0      128000      256000      384000
+  Wonoub:      128000      256000      384000      512000
+  ----------------------------
+  
+  iter = 0 (lvl = 1)
+  wono_min =       128001
+  wono_max =       255981
+  ivar_min =       140801
+  ivar_max =       147200
+  tot_vars =       147200
+  
+  DB stats: 
+  number of allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         6400  <- of rank           1
+  
+ Started Extending Neighborhoods
+  
+   Checking if more cells need to be added 
+   Add_more is  F
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            0
+   Sendind/Receiving requests for cell centers / tags_n1 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+  
+  iter =            1
+  wono_min =       128001
+  wono_max =       255981
+  ivar_min =       140801
+  ivar_max =       147200
+  tot_vars =       147200
+  
+  DB stats: 
+  allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         6400
+  
+  Checking neighborhoods bounds
+  Done extending Neighborhoods 
+   Checking if more cells need to be added 
+   Add_more is  F
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            0
+   Sendind/Receiving requests for cell centers / tags_n1 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+  
+  iter =            2
+  wono_min =       128001
+  wono_max =       255981
+  ivar_min =       140801
+  ivar_max =       147200
+  tot_vars =       147200
+  
+  DB stats: 
+  allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         6400
+  
+  Checking neighborhoods bounds
+  Done extending Neighborhoods 
+  Finalizing Neighborhoods 
+  Creating Permanent Messengers 
+  Done Neighs Setup 
+  Checking for errors... 
+  Checking for errors...Done 

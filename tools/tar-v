@@ -1,0 +1,27 @@
+#!/bin/sh
+
+echo ' Taring O2 '
+if [ -z $1 ]; then 
+  vers='current'  
+else
+  vers=$1
+fi
+
+echo ' using Version : ' $vers
+
+cd $ISIS_HOME/fPW/
+
+tarlog=tar_log_O2_v$vers.txt
+
+echo "===================================================== O2 Tar Log" > $tarlog
+echo "    Backup log for O2 version $vers " >> $tarlog
+echo " " >> $tarlog
+echo "    created : " `date` >> $tarlog
+echo "================================================================" >> $tarlog
+
+tar -zcvf O2-$vers.tar.gz --exclude='*.dat' --exclude='*.out' --exclude='*.plt' --exclude='.git' O2-project >> $tarlog
+
+mv -v O2-$vers.tar.gz O2-project~/
+mv -v $tarlog O2-project~/
+
+echo

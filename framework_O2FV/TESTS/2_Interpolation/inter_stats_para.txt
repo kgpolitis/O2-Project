@@ -1,0 +1,10 @@
+  Number of Nodes =        2646
+  Number of Nodes with 0 neigh cell =        1323
+  Number of Nodes with 1 neigh cell =           8
+  Number of Nodes with 2 neigh cell =         228
+  Number of Nodes with 3 neigh cell =           0
+  Number of Nodes with 4 neigh cell =        2166
+  Number of Nodes with 5 neigh cell =           0
+  Number of Nodes with 6 neigh cell =           0
+  Number of Nodes with 7 neigh cell =           0
+  Number of Nodes with 8 neigh cell =        6859

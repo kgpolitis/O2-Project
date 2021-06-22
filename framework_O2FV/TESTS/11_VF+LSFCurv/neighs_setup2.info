@@ -1,0 +1,157 @@
+  
+  Finding Neighborhoods 
+  Initializing Basic Data
+  Mode is:            0
+  Using Tags 
+  Using n1 Tags 
+  Using level per cell 
+  - Started Setting up n1 neighs 
+  - Setting up n1 neighborhoods in tagged cells and n1 tagged cells 
+  - Add_more is true... 
+  - missing n1 neighs required but not found 
+  - n1 still not locally available -> get from neighs 
+  -         5749 cells n1 neighs obtained by neighs
+  - n1_globally_available =  F
+  - Working with n1 tags
+  - Started Setting up n1 neighs with lasso 
+  - Finished Setting up n1 neighs with lasso 
+  
+  ----------------------------
+  Ranks :           4
+  Cells :      250000      250000      250000      250000
+  Wonolb:           0      250000      500000      750000
+  Wonoub:      250000      500000      750000     1000000
+  ----------------------------
+  
+  iter = 0 (lvl = 1)
+  wono_min =       250025
+  wono_max =       999976
+  ivar_min =       260001
+  ivar_max =       284893
+  tot_vars =       280000
+  
+  DB stats: 
+  number of allocated entries :            2
+  accepting elements from ranks :            1           3
+  elements already stored :        12290  <- of rank           1
+  elements already stored :        12603  <- of rank           3
+  
+ Started Extending Neighborhoods
+  
+   Checking if more cells need to be added 
+   Add_more is  T
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   No n1 updates are required from rank            1
+   No n1 updates are required from rank            3
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            2
+   Finalizing database extensions 
+   Extending Database 
+   Adding new elementes to database 
+    Adding to column of rank :           1
+    Nothing added 
+    Adding to column of rank :           3
+    Nothing added 
+   Sendind/Receiving requests for cell centers / tags_n1 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+   Moving cell centers to the database 
+  Updating cells from rank:           1
+      found in :           2  of request set
+      No extension provided by that rank
+  Updating cells from rank:           3
+      found in :           3  of request set
+      No extension provided by that rank
+  
+  iter =            1
+  wono_min =       250025
+  wono_max =       999976
+  ivar_min =       260001
+  ivar_max =       284893
+  tot_vars =       280000
+  
+  DB stats: 
+  allocated entries :            2
+  accepting elements from ranks :            1           3
+  elements already stored :        12290
+  elements already stored :        12603
+  
+  Checking neighborhoods bounds
+   Extending Neighborhoods 
+  Done extending Neighborhoods 
+   Checking if more cells need to be added 
+   Add_more is  T
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   No n1 updates are required from rank            1
+   No n1 updates are required from rank            3
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            2
+   Finalizing database extensions 
+   Extending Database 
+   Adding new elementes to database 
+    Adding to column of rank :           1
+    Nothing added 
+    Adding to column of rank :           3
+    Nothing added 
+   Sendind/Receiving requests for cell centers / tags_n1 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+   Moving cell centers to the database 
+  Updating cells from rank:           1
+      found in :           2  of request set
+      No extension provided by that rank
+  Updating cells from rank:           3
+      found in :           3  of request set
+      No extension provided by that rank
+  
+  iter =            2
+  wono_min =       250025
+  wono_max =       999976
+  ivar_min =       260001
+  ivar_max =       284893
+  tot_vars =       280000
+  
+  DB stats: 
+  allocated entries :            2
+  accepting elements from ranks :            1           3
+  elements already stored :        12290
+  elements already stored :        12603
+  
+  Checking neighborhoods bounds
+   Extending Neighborhoods 
+  Done extending Neighborhoods 
+   Checking if more cells need to be added 
+   Add_more is  F
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            2
+   Sendind/Receiving requests for cell centers / tags_n1 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+  
+  iter =            3
+  wono_min =       250025
+  wono_max =       999976
+  ivar_min =       260001
+  ivar_max =       284893
+  tot_vars =       280000
+  
+  DB stats: 
+  allocated entries :            2
+  accepting elements from ranks :            1           3
+  elements already stored :        12290
+  elements already stored :        12603
+  
+  Checking neighborhoods bounds
+  Done extending Neighborhoods 
+  Finalizing Neighborhoods 
+  Creating Permanent Messengers 
+  Done Neighs Setup 
+  Checking for errors... 
+  Checking for errors...Done 

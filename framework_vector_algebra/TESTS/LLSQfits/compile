@@ -1,0 +1,23 @@
+#ifort test_llsqfits.f90 -o Reg_test2D.out \
+# -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods
+
+#ifort test_llsqfits.f90 -o Reg_test3D.out \
+# -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods
+
+#ifort test_llsqfits_weights.f90 -o Reg_test2D_weights.out \
+# -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods
+
+ifort test_llsqfits_3D.f90 -o Reg_test3D.out \
+ -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods
+ 
+ifort test_fit4curv.f90 -o fit4curv.out \
+ -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods
+ 
+ifort -O3 test_fit4curv2.f90 -o fit4curv2.out \
+ -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods
+
+ ifort test_llsqfits_1D.f90 -o fit1D.out \
+ -I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods
+
+# !ifort test_llsqfits_1D_changeofbasis.f90 -o fit1D_cob.out \
+# !-I../../../Dlib_lucid/incs -L../../../Dlib_lucid/archives/ -lfva -lgenmods

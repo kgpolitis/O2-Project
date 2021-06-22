@@ -1,0 +1,24 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+  -> Working Options 
+      generate surface grid  = T
+      remove isofaces        = T
+  
+  -> Node Counts 
+     in  :         4410
+     out :         4410
+     at  :          441
+     tot :         9261
+    > Node count ok
+      No iso faces found 
+  
+  -> Generating Node list
+  -> Cleaning scells/vcells connectivities
+  -> Capturing isosurfaces
+  -> Compressing raw data
+  -> Generating grid
+  -> Metrics + scells/vcells connectivities
+  -> DONE

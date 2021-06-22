@@ -1,0 +1,36 @@
+  ---- Surface Grid Generation by RAW capturing data : debug file 
+  ---- Interface's Name is : sin20
+  -------- 
+  > Initializing basic hashtable 
+    > min hash=         2207
+    > max hash=         7055
+    > getting addresses 
+  > Hashtable init : DONE 
+  |-> Surface grid nodes no =        1465
+  -------- 
+  > Setting up surface grid nodes 
+    > Setting up surface grid nodes basics : DONE 
+    > Checking for nodes in faces 
+    > NONE FOUND 
+  > Setting up surface grid nodes : DONE
+  -------- 
+  > Hashing for surface grid edges 
+  > Hashing for surface grid edges : DONE
+  |-> Surface grid edges no =        2860
+  -------- 
+  > Building surface grid edges 
+  > Building surface grid edges : DONE
+  -------- 
+  > Building surface grid cells/edges/nodes
+  |-> Surface grid cells no =        1396
+    > Setting ivars 
+  > Building surface grid cells/edges/nodes : DONE
+  -------- 
+     
+  > Surface Grid Stats
+  - Nodes  :         1465
+  - Edges  :         2860
+  - Bedges :          176
+  - Nvar   :         1572
+  - Cells  :         1396
+  - Euler X:            1

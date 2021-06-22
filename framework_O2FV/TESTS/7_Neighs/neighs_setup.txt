@@ -1,0 +1,19 @@
+  Mode is:            0
+  Topo Mode is: n2c
+  Using Tags 
+  Not using n1 Tags 
+  Not using level per cell 
+  Searches are masked 
+  - Started Setting up n1 neighs 
+  - Started Setting up n1 neighs with lasso 
+  - Finished Setting up n1 neighs with lasso 
+   Working with Neighborhoods 
+  Generating n1 neighborhoods of requested cells : dynamic search 
+  Number of cells :       14040
+  Searching for neighborhoods 
+  Done extending Neighborhoods 
+  Generating n1 neighborhoods of requested cells : dynamic search 
+  Number of cells :       13560
+  Searching for neighborhoods 
+  Done extending Neighborhoods 
+  Done Neighs Setup 

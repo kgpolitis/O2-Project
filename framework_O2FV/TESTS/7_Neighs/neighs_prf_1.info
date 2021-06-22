@@ -1,0 +1,144 @@
+           1 Find n1 did        :  1.479999999719439E-002
+           1 n1 lasso did       :  2.000000000407454E-003
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  8.000000016181730E-004
+           1 add more last time :  0.148399999998219     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  8.000000016181730E-004
+           1 add more last time :   1.02079999999842     
+           1 totaltime  --------:   1.19429999999556     
+           1 Find n1 did        :  0.117599999997765     
+           1 n1 lasso did       :  1.649999999790452E-002
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  4.899999999906868E-003
+           1 add more last time :   1.33000000000175     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  5.999999993946403E-003
+           1 add more last time :   9.87690000000293     
+           1 totaltime  --------:   11.4308000000019     
+           1 Find n1 did        :  0.394399999997404     
+           1 n1 lasso did       :  5.259999999543652E-002
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  1.859999999578577E-002
+           1 add more last time :   4.61240000000544     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  2.059999999619322E-002
+           1 add more last time :   35.7479999999996     
+           1 totaltime  --------:   41.1978000000017     
+           1 Find n1 did        :  0.955199999996694     
+           1 n1 lasso did       :  0.123699999996461     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  4.799999999522697E-002
+           1 add more last time :   10.9709000000003     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  5.619999999908032E-002
+           1 add more last time :   86.7595999999976     
+           1 totaltime  --------:   100.574199999995     
+           1 Find n1 did        :   1.86179999999877     
+           1 n1 lasso did       :  0.244299999998475     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  0.114500000003318     
+           1 add more last time :   21.9107000000004     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  0.121500000001106     
+           1 add more last time :   176.293799999999     
+           1 totaltime  --------:   203.249100000001     
+           1 Find n1 did        :  8.789999998407438E-002
+           1 n1 lasso did       :  8.200000011129305E-003
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  1.070000001345761E-002
+           1 add more last time :  0.841599999985192     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  1.289999997243285E-002
+           1 add more last time :   7.23780000000261     
+           1 totaltime  --------:   8.33309999998892     
+           1 Find n1 did        :  6.360000002314337E-002
+           1 n1 lasso did       :  8.500000025378540E-003
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  1.510000001871958E-002
+           1 add more last time :  0.710400000010850     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  1.729999997769482E-002
+           1 add more last time :   5.68720000001485     
+           1 totaltime  --------:   7.37659999998868     
+           1 Find n1 did        :  6.390000000828877E-002
+           1 n1 lasso did       :  8.299999986775219E-003
+           1 Dynamic search did :  1.000000047497451E-004
+           1 time for DGM update:  1.069999998435378E-002
+           1 add more last time :  0.720200000010664     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  1.289999997243285E-002
+           1 add more last time :   5.68780000001425     
+           1 totaltime  --------:   7.55499999999302     
+           1 Find n1 did        :  1.259999998728745E-002
+           1 n1 lasso did       :  1.799999998183921E-003
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  2.500000002328306E-003
+           1 add more last time :  0.151199999992969     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  2.900000021327287E-003
+           1 add more last time :  0.743199999997159     
+           1 totaltime  --------:  0.927800000004936     
+           1 Find n1 did        :  1.269999999203719E-002
+           1 n1 lasso did       :  1.799999998183921E-003
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  2.399999997578561E-003
+           1 add more last time :  0.157899999991059     
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  2.799999987473711E-003
+           1 add more last time :  0.732799999997951     
+           1 totaltime  --------:  0.923799999989569     
+           1 Find n1 did        :  1.490000000922009E-002
+           1 n1 lasso did       :  2.100000012433156E-003
+           1 Dynamic search did :  4.579999999259599E-002
+           1 time for DGM update:  1.209999999264255E-002
+           1 add more last time :  0.123499999986961     
+           1 Dynamic search did :  4.750000001513399E-002
+           1 time for DGM update:  1.550000000861473E-002
+           1 add more last time :   1.02530000000843     
+           1 totaltime  --------:   1.64309999998659     
+           1 Find n1 did        :  4.999999946448952E-004
+           1 n1 lasso did       :  1.000000047497451E-004
+           1 Dynamic search did :  1.699999993434176E-003
+           1 time for DGM update:  4.999999946448952E-004
+           1 add more last time :  4.599999985657632E-003
+           1 Dynamic search did :  1.799999969080091E-003
+           1 time for DGM update:  1.199999998789281E-003
+           1 add more last time :  3.449999997974373E-002
+           1 totaltime  --------:  6.909999999334104E-002
+           1 Find n1 did        :  6.999999750405550E-004
+           1 n1 lasso did       :  1.000000047497451E-004
+           1 Dynamic search did :  2.600000007078052E-003
+           1 time for DGM update:  4.999999946448952E-004
+           1 add more last time :  8.600000001024455E-003
+           1 totaltime  --------:  1.339999999618158E-002
+           1 Find n1 did        :  2.100000000041291E-003
+           1 n1 lasso did       :  4.999999999881766E-004
+           1 Dynamic search did :  8.299999999849206E-003
+           1 time for DGM update:  1.499999999964530E-003
+           1 add more last time :  1.930000000004384E-002
+           1 totaltime  --------:  5.299999999999727E-002
+           1 Find n1 did        :  2.000000000407454E-003
+           1 n1 lasso did       :  2.999999996973202E-004
+           1 Dynamic search did :  7.300000001123408E-003
+           1 time for DGM update:  1.700000000710133E-003
+           1 add more last time :  2.130000000033760E-002
+           1 totaltime  --------:  5.520000000251457E-002
+           1 Find n1 did        :  1.260000000183936E-002
+           1 n1 lasso did       :  1.899999999295687E-003
+           1 totaltime  --------:  1.640000000043074E-002
+           1 Find n1 did        :  1.239999999961583E-002
+           1 n1 lasso did       :  1.799999998183921E-003
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  2.500000002328306E-003
+           1 add more last time :  0.100099999999657     
+           1 totaltime  --------:  0.124400000000605     
+           1 Find n1 did        :  1.129999999830034E-002
+           1 n1 lasso did       :  1.000000000203727E-003
+           1 Dynamic search did :  0.000000000000000E+000
+           1 time for DGM update:  1.799999998183921E-003
+           1 add more last time :  8.260000000154832E-002
+           1 totaltime  --------:  0.103399999999965     
+           1 Find n1 did        :  1.290000000153668E-002
+           1 n1 lasso did       :  1.799999998183921E-003
+           1 totaltime  --------:  1.560000001336448E-002

@@ -1,0 +1,42 @@
+ -------------------------------------------------------------
+ ----              Ci Initialization Report              -----
+ -------------------------------------------------------------
+  
+  
+ ------------------------ Nodes Count ----------------------  
+  
+ ---> in  nodes =          485
+ ---> out nodes =        52846
+ ---> at  nodes =           30
+  
+ ---> sum of nodes check :: ok
+  
+  NOTE:: Working with at-margin =   1.000000000000000E-014
+      :: this means that a node is at if :
+                 abs(F(node%point)) < almost_at 
+  
+  
+ ------------------------ Faces Count ----------------------  
+  
+ ---> in  faces =         1092
+ -----> from which inat=            0
+ ---> out faces =       147304
+ ---> at  faces =          804
+  
+ ---> sum of faces check :: ok
+  
+  ---> Faces with more than two section points: 
+   None 
+  
+ ------------------------- FVs Count -----------------------  
+  
+ ---> in  FVs =          304
+ ---> out FVs =        47280
+ ---> at  FVs =          416
+  
+ ---> sum of FVs check :: ok
+  
+  
+ ------------------------  Trimmed Ci -----------------------  
+  None 
+ ----------------------- Ci looks good ---------------------  

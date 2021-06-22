@@ -1,0 +1,14 @@
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 1 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Interpolation corrections are based on ivar
+2. Gradient is not used for the interpolation, nor for the corrections
+3. PLIC is not used, ivar Ci values are derived by a zero face gradient approach
+
+
+Observations:
+1. Introducing more corrections steps results to a diverging algorithm, so npasses=0
+2. The curvature scales correctly, but unfortunately this means that it becomes higher and higher.
+

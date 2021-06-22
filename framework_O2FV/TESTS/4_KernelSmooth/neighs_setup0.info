@@ -1,0 +1,210 @@
+  
+  Finding Neighborhoods 
+  Initializing Basic Data
+  Done Initializing 
+  Using Tags 
+  
+  ----------------------------
+  Ranks :           4
+  Cells :       16000       16000       16000       16000
+  Wonolb:           0       16000       32000       48000
+  Wonoub:       16000       32000       48000       64000
+  ----------------------------
+  
+  iter = 0
+  wono_min =        16001
+  wono_max =        31991
+  ivar_min =        19201
+  ivar_max =        20800
+  tot_vars =        20800
+  
+  DB stats: 
+  number of allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         1600
+ Started Extending Neighborhoods
+   Checking if more cells need to be added 
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            0
+   Working with n1 neighborhood received by rank           1
+  Neighs1 Set, count seems good
+   Seperating/Grouping ... 
+     > removed zeros 
+     > removed local cells 
+     > Checked in cells: wonos between wono_min,wono_max 
+     > Checked in cells: wonos below wono_min 
+     > Checked in cells: wonos above wono_max 
+     > Cells Grouped into local cells to rank            1
+   Seperating/Grouping : DONE 
+   Finalizing database extensions 
+   Extending Database 
+   Adding new elementes to database 
+    Adding to column of rank :           1
+   Sendind/Receiving requests for cell centers 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+   Moving cell centers to the database 
+  Updating cells from rank:           1
+      found in :           1  of request set
+  Cells came from rank:           1
+  Setting cells from :         1601 up to        3170
+        ie from ivar :        20801 up to       22370
+  
+  iter =            1
+  wono_min =        16001
+  wono_max =        31992
+  ivar_min =        19201
+  ivar_max =        22370
+  tot_vars =        20800
+  
+  DB stats: 
+  allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         3170
+  
+  Checking neighborhoods bounds
+   Extending Neighborhoods 
+  Done extending Neighborhoods 
+   Checking if more cells need to be added 
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            0
+   Working with n1 neighborhood received by rank           1
+  Neighs1 Set, count seems good
+   Seperating/Grouping ... 
+     > removed zeros 
+     > removed local cells 
+     > Checked in cells: wonos between wono_min,wono_max 
+     > Checked in cells: wonos below wono_min 
+     > Checked in cells: wonos above wono_max 
+     > Cells Grouped into local cells to rank            1
+   Seperating/Grouping : DONE 
+   Finalizing database extensions 
+   Extending Database 
+   Adding new elementes to database 
+    Adding to column of rank :           1
+   Sendind/Receiving requests for cell centers 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+   Moving cell centers to the database 
+  Updating cells from rank:           1
+      found in :           1  of request set
+  Cells came from rank:           1
+  Setting cells from :         3171 up to        4762
+        ie from ivar :        22371 up to       23962
+  
+  iter =            2
+  wono_min =        16001
+  wono_max =        31993
+  ivar_min =        19201
+  ivar_max =        23962
+  tot_vars =        20800
+  
+  DB stats: 
+  allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         4762
+  
+  Checking neighborhoods bounds
+   Extending Neighborhoods 
+  Done extending Neighborhoods 
+   Checking if more cells need to be added 
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            0
+   Working with n1 neighborhood received by rank           1
+  Neighs1 Set, count seems good
+   Seperating/Grouping ... 
+     > removed zeros 
+     > removed local cells 
+     > Checked in cells: wonos between wono_min,wono_max 
+     > Checked in cells: wonos below wono_min 
+     > Checked in cells: wonos above wono_max 
+     > Cells Grouped into local cells to rank            1
+   Seperating/Grouping : DONE 
+   Finalizing database extensions 
+   Extending Database 
+   Adding new elementes to database 
+    Adding to column of rank :           1
+   Sendind/Receiving requests for cell centers 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+   Moving cell centers to the database 
+  Updating cells from rank:           1
+      found in :           1  of request set
+  Cells came from rank:           1
+  Setting cells from :         4763 up to        4792
+        ie from ivar :        23963 up to       23992
+  
+  iter =            3
+  wono_min =        16001
+  wono_max =        31993
+  ivar_min =        19201
+  ivar_max =        23992
+  tot_vars =        20800
+  
+  DB stats: 
+  allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         4792
+  
+  Checking neighborhoods bounds
+   Extending Neighborhoods 
+  Done extending Neighborhoods 
+   Checking if more cells need to be added 
+   Gathering wonos of cells whose n1 neighborhoods are required 
+   Sending/Receiving requests 
+   Gathering requested n1 neighborhoods 
+   Sending/Receiving requested n1 neighborhoods 
+   Moving n1 neighborhoods to the database            0
+   Working with n1 neighborhood received by rank           1
+  Neighs1 Set, count seems good
+   Seperating/Grouping ... 
+     > removed zeros 
+     > removed local cells 
+     > Checked in cells: wonos between wono_min,wono_max 
+     > Checked in cells: wonos below wono_min 
+     > Checked in cells: wonos above wono_max 
+     > Cells Grouped into local cells to rank            1
+   Seperating/Grouping : DONE 
+   Finalizing database extensions 
+   Extending Database 
+   Adding new elementes to database 
+    Adding to column of rank :           1
+   Sendind/Receiving requests for cell centers 
+   Gathering requested cell centers 
+   Sending/Receiving cell centers 
+   Moving cell centers to the database 
+  Updating cells from rank:           1
+      found in :           1  of request set
+  Cells came from rank:           1
+  Setting cells from :         4793 up to        4796
+        ie from ivar :        23993 up to       23996
+  
+  iter =            4
+  wono_min =        16001
+  wono_max =        31993
+  ivar_min =        19201
+  ivar_max =        23996
+  tot_vars =        20800
+  
+  DB stats: 
+  allocated entries :            1
+  accepting elements from ranks :            1
+  elements already stored :         4796
+  
+  Checking neighborhoods bounds
+   Extending Neighborhoods 
+  Done extending Neighborhoods 
+   Checking if more cells need to be added 
+   Premature exit from search 
+  Finalizing Neighborhoods 
+  Creating Permanent Messengers 
+  Done Neighs Setup 

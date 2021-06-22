@@ -1,0 +1,5 @@
+VE=importdata('~/O2-project/framework_VFinit/TESTS/5_VFISO/areavol_sph.txt')
+s=fitoptions('Method','NonlinearLeastSquares','StartPoint',[1 1])
+f = fittype('a*x^k','options',s)
+[ErrV_fun,gof2] = fit(2*pi./VE.data(1:15:end,2),VE.data(1:15:end,5),f,s)
+[ErrA_fun,gof2] = fit(2*pi./VE.data(1:15:end,2),VE.data(1:15:end,6),f,s)

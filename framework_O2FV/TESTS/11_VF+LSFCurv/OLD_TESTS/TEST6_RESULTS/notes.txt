@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------------
+Notes and Observations about TEST CASE 6 for introducing the boundary corrections
+---------------------------------------------------------------------------------
+
+Case description:
+1. Interpolation corrections are based on faces
+2. Gradient is used for the interpolation and the corrections
+3. PLIC is used
+4. Npasses is 0
+
+
+Observations:
+1. We used 5 passes as we did in TEST5, where we used the ivar interpolation corrections.
+2. The results are a bit worse but similar to TEST5.
+3. The curvature is a bit smaller but stills scales upwards as the grid is refined.
+

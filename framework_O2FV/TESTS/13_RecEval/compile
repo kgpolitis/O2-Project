@@ -1,0 +1,5 @@
+
+ifort -O3 rec_eval.f90 -I../../../Dlib/incs \
+-L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+-L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+-o recE.out

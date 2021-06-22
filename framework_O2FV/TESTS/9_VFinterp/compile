@@ -1,0 +1,14 @@
+ ifort -check all interp_vf.f90 -I../../../Dlib/incs \
+ -L../../../Dlib/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+ -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+ -o interp_shepard.out
+
+# ifort -check all interp_vf.f90 -I../../../Dlib_lucid/incs \
+# -L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+# -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+# -o interp_shepard.out
+
+# ifort -check all interp_shepard_para.f90 -I../../../Dlib_lucid/incs \
+# -L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+# -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+# -o interp_shepard_para.out

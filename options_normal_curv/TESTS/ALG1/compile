@@ -1,0 +1,9 @@
+ ifort -check all alg1.f90 -I../../../Dlib_lucid/incs \
+ -L../../../Dlib_lucid/archives -loptsnc -lO2Inits -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+ -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+ -o alg1.out
+
+# ifort -check all kernel_test_para.f90 -I../../../Dlib_lucid/incs \
+# -L../../../Dlib_lucid/archives -lo2fv -lvfinit -lO2Grid -lO2mpi -lfva -lgenmods \
+# -L../../../../../mpich/lib -lmpich -lmpichf90 -lpmpich \
+# -o kernel_test_para.out
